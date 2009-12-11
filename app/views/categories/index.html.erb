@@ -1,0 +1,16 @@
+<%- selected(:produtos) %>
+
+<h3 class="titles_index">Produtos</h3>
+<br />
+
+
+<% @categories.each do |category| %>
+    <%=h category.title %></td>
+   	<%= link_to 'Show', category %></td>
+    <%= link_to 'Edit', edit_category_path(category) %></td>
+    <%= link_to 'Destroy', category, :confirm => 'Are you sure?', :method => :delete %></td>
+<% end %>
+
+<br />
+
+<%= link_to 'New category', new_category_path %>

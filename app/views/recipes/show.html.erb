@@ -1,0 +1,27 @@
+<h3 class="titles_index">Exibindo, <%= @recipe.name %></h3>
+<br />
+<table border="0" class="table-show-recipe">
+	<tr>
+		<th>Receita</th>
+		<td><%=h @recipe.name %></td>
+	</tr>
+	<tr>
+		<th>Enviado por</th>
+		<td><b><%=h @recipe.person_name %></b>(<%= @recipe.email %>)</td>
+	</tr>
+	<tr>
+		<th>Ingredientes</th>
+		<td><%=h @recipe.ingredients %></td>
+	</tr>
+	<tr>
+		<th>Preparo</th>
+		<td><%=h @recipe.preparation %></td>
+	</tr>
+	<tr>
+		<th>Dicas</th>
+		<td><%=h @recipe.tip %></td>
+	</tr>
+</table>
+<br />
+<%= image_tag("arrow.png", :class=> "align-arrow") %>
+<%= link_to 'Voltar', recipes_path, :class => "style-link-recipe" %>

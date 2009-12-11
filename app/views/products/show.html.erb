@@ -1,0 +1,46 @@
+<%- selected(:produtos) %> 
+
+<h3 class="titles_index">Voce esta em: <%= @category.title %></h3>
+<br /><br />
+
+	<% @products.each  do |p| %>
+	<div id="all-products">
+		
+		<div id="product-left">
+			<span class="name-products">
+				<%=h p.name %>
+			</span>
+			<p>
+				<%= image_tag p.produto.url(:thumb) %>
+			</p>
+		</div>
+		<div id="product-right">
+			<p>
+				<%= image_tag("arrow_2.png", :class => "align-arrow") %>
+				<b>Code: </b>
+				<%=h p.code %>
+			</p>
+
+			<p>
+				<%= image_tag("arrow_2.png", :class => "align-arrow") %>
+				<b>Peso: </b>
+				<%=h p.weight %>
+			</p>
+
+			<p>
+				<%= image_tag("arrow_2.png", :class => "align-arrow") %>
+				<b>Ingredientes: </b>
+				<%= p.ingredients %>
+			</p>
+
+		</div>
+
+	</div>
+
+		<br />
+
+	<% end %>
+
+<br />
+<%= image_tag("arrow.png", :class=> "align-arrow") %>
+<%= link_to 'Voltar', products_path, :class => "style-link-recipe" %>

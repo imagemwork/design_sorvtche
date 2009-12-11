@@ -1,0 +1,64 @@
+<h3 class="titles_index">Receitas(<%= link_to 'envie uma', new_recipe_path %>)</h3>
+
+<% form_tag :action => "check_recipes" do %>
+	<div id="top-table">
+		<%= submit_tag "Permitir", :class => "button-login" %>
+		<%= flash[:warn] %>
+	</div>
+	<table border="0" class="table-lock">
+		<% @recipes.each do |r| %>
+			<tr>
+				<td align="center" width="1%">
+					<%= link_to image_tag("trash.png", :border => 0), recipe_path(r), :method => :delete %>
+				</td>
+				<% if r.passed == false %>
+		
+					<td align="center" width="5%">
+						<%= check_box_tag "r_id[]", r.id %>
+					</td>
+					<td>
+						<%= link_to r.name, r %> <small class="rest"><b><%= r.created_at.strftime("%d/%m/%y") %> </b>por<b> <%= r.person_name %></b></small>
+																		 <small class="rest"><b><%= r.email %></b></small>
+					</td>
+		
+				<% else %>
+		
+					<td align="center" width="5%">
+						<%= link_to image_tag("locked.png", :border => 0), :action => "lock", :id => r.id %>
+					</td>
+					<td>
+						<%= link_to r.name, r %> <small class="rest-lock"><b><%= r.created_at.strftime("%d/%m/%y") %> </b>por<b> <%= r.person_name %></b></small>
+																		 <small class="rest-lock"><b><%= r.email %></b></small>
+					</td>
+		
+				<% end %>
+			</tr>
+		<% end %>
+		
+	</table>
+
+<br />
+<% end %>
+
+
+<h3 class="titles_index">Categorias Produtos(<%= link_to 'Crie Uma', new_category_path %>)</h3>
+<h3 class="titles_index">Produtos(<%= link_to 'Crie Um', new_product_path %>)</h3>
+
+<h3 class="titles_index">Mensagens de Contato</h3>
+
+<table border="0" class="table-contact">
+	<tr>
+		<th>id</th>
+		<th>Nome</th>
+		<th>Assunto</th>
+		<th>Mensagem</th>
+	</tr>
+	<% @contacts.each do |p| %>
+		<tr>
+			<td>#<%= p.id %></td>
+			<td><%= p.nome %></td>
+			<td><%= p.assunto %></td>
+			<td><%= p.mensagem %></td>
+		</tr>
+	<% end %>
+</table>

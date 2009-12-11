@@ -1,0 +1,40 @@
+body { text-align: center; }
+ul#topnav li{ 	height:38px; }
+#pnlMenu { width: 300px; }
+
+#show-categories { width: 100px; }
+
+#pnlContentSilver {
+	background: #EFEFEF url("/images/home-top.jpg") no-repeat left top;
+}
+
+
+.name-products{
+	-moz-border-radius: 0.7em;
+	background: #ccc;
+	position: relative;
+	top: -19px;
+	font-weight: bold;
+	left: 0px;
+	color: #666;
+	font-family: Arial, Helvetica, Sans-serif;
+	padding: 3px 5px 3px 5px;
+	background: url("/images/name-products.jpg") no-repeat left center;
+}
+
+#show-categories {
+	height: 150px;
+	border: none;
+	background: url("/images/show-categories.jpg") no-repeat left top;
+}
+
+#pnlContentPrincipal {
+	width: 700px;
+	background: #fff;
+}
+
+.box {
+	float: left;
+	width: 120px;
+
+}

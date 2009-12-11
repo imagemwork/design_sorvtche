@@ -1,0 +1,10 @@
+<%- selected(:contato) %>
+
+<h3 class="titles_index" align="center">
+	<%= image_tag("success.png", :class=>"test") %><br /><br />
+	 <%= @contact.nome %>, Obrigado por entrar em contato conosco! Estaremos respondendo o mais breve possivel.
+</h3>
+
+<br /><br />
+<%= image_tag("arrow.png", :class=> "align-arrow") %>
+<%= link_to 'Voltar', home_index_path, :class => "style-link-recipe" %>

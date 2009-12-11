@@ -1,0 +1,69 @@
+<html>
+	<head>
+		<meta http-equiv="Content-type" content="text/html; charset=utf-8" />
+		<title>Sorvtche</title>
+		<%= stylesheet_link_tag "index", "menu", "jquery.jcarousel.css", "skin" %>
+		<%= javascript_include_tag "jquery", "menu", "jquery.jcarousel.pack" %>
+		
+		<!--[if IE]>
+			<%= stylesheet_link_tag "ie" %>
+		<![endif]-->
+		<!--[if IE 6]>
+			<%= stylesheet_link_tag "ie6" %>
+		<![endif]-->
+
+		<script type="text/javascript">
+			jQuery(document).ready(function() {
+					jQuery('#mycarousel').jcarousel();
+			});
+		</script>
+	</head>
+	<body>
+		<div id="pnlAll">
+			<div id="pnlHeader">
+					FUCK
+				<div id="pnlMenu">
+					<ul id="topnav" class="V2">
+						<li class="<%= yield(:home) %>"><%= link_to image_tag("home.png", :border=>0, :class => "avril"), 
+																		:controller => "home", :action => "index"  %>
+						</li>
+						<li class="<%= yield(:produtos) %>"><%= link_to "Produtos", products_path %></li>
+						<li class="<%= yield(:recipes) %>"><%= link_to "Receitas", recipes_path %></li>
+						<li class="<%= yield(:franquias) %>"><%= link_to "Franquias", :action => "franquias" %></li>
+						<li class="<%= yield(:contato) %>"><%= link_to "Contato", new_contact_path %></li>
+					</ul>	
+					
+				</div>
+			</div>
+			<div id="pnlDobra">
+				<p></p>
+			</div>
+			<div id="pnlContent">
+				<div id="pnlContentPrincipal">
+					<div id="pnlSlides">
+						<ul id="mycarousel" class="jcarousel-skin-tango">
+							<% produtos %>
+							<% @products.each do |p| %>
+								<li>
+									<%= link_to image_tag(p.produto.url(:thumb), :width => 80, :height => 70, :border => 0), 
+																		:controller => "products",
+																		:action => "show",
+																		:id => p.categories_id %>
+								</li>
+							<% end %>
+						</ul>
+					</div>
+					<div id="pnlContentSilver">
+						<% unless flash[:notice].blank? %>
+							<div id="flash_notice"><%= flash[:notice] %></div>
+						<% end %>
+						<%= yield %>
+					</div>
+					<div id="pnlFooter">
+						<p>Sorvtche 2010 - Todos Direitos Reservados</p>
+					</div>
+				</div>
+			</div>
+		</div>
+	</body>
+</html>

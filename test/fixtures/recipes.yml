@@ -1,0 +1,13 @@
+# Read about fixtures at http://ar.rubyonrails.org/classes/Fixtures.html
+
+one:
+  name: MyString
+  ingredients: MyText
+  preparation: MyText
+  tip: MyText
+
+two:
+  name: MyString
+  ingredients: MyText
+  preparation: MyText
+  tip: MyText
