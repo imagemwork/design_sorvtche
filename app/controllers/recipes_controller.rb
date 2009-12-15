@@ -4,9 +4,7 @@ class RecipesController < ApplicationController
   before_filter :authenticate, :only => [:edit, :destroy]
   
   def index
-    
-    @recipes = Recipe.find(:all, :order => "id desc")
-
+    @recipes = Recipe.find(:all, :conditions => "passed = 't'", :order => "id desc")
   end
 
   def show
@@ -49,8 +47,6 @@ class RecipesController < ApplicationController
     end
   end
 
-  # PUT /recipes/1
-  # PUT /recipes/1.xml
   def update
     @recipe = Recipe.find(params[:id])
 
@@ -66,8 +62,6 @@ class RecipesController < ApplicationController
     end
   end
 
-  # DELETE /recipes/1
-  # DELETE /recipes/1.xml
   def destroy
     @recipe = Recipe.find(params[:id])
     @recipe.destroy

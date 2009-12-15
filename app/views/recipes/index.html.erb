@@ -17,15 +17,11 @@
 </div>
 
 	<% @recipes.each do |r| %>
-
-		<% if r.passed == true %>
 	
-			<%= image_tag("arrow_2.png", :class=> "align-arrow") %>
-			<%= link_to r.name, r, :class => "style-link-recipe" %>
-			<small>(<%= r.created_at.strftime("%d/%m/%y") %>)</small>
-			<br />
-	
-		<% end %>
+		<%= image_tag("arrow_2.png", :class=> "align-arrow") %>
+		<%= link_to r.name, r, :class => "style-link-recipe" %>
+		<small>(<%= r.created_at.strftime("%d/%m/%y") %>)</small>
+		<br />
 	
 	<% end %>
 

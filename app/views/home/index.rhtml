@@ -17,13 +17,13 @@
 		
 			<% @recipes.each do |r| %>
 
-		  		<%= image_tag("arrow.png", :class => "align-arrow") %>
-		  		<%= link_to r.name, r, :class => "style-link-recipe" %>
-	  		
-		  		<small>(<%= r.created_at.strftime("%d/%m/%y") %>)</small>
+			  		<%= image_tag("arrow.png", :class => "align-arrow") %>
+			  		<%= link_to r.name, r, :class => "style-link-recipe" %>
+  		
+			  		<small>(<%= r.created_at.strftime("%d/%m/%y") %>)</small>
 
 			<% end %>
-		
+
 		</p>
 	</div>
 </div>
