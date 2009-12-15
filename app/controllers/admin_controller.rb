@@ -6,6 +6,10 @@ class AdminController < ApplicationController
 		@recipes = Recipe.find(:all, :order => "id desc")
 	  @contacts = Contact.all
 	end
+	
+	def list
+	 @products = Product.all
+	end
 
 	def check_recipes
 	

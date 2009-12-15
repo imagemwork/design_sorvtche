@@ -28,7 +28,7 @@
 					</td>
 					<td>
 						<%= link_to r.name, r %> <small class="rest-lock"><b><%= r.created_at.strftime("%d/%m/%y") %> </b>por<b> <%= r.person_name %></b></small>
-																		 <small class="rest-lock"><b><%= r.email %></b></small>
+											     <small class="rest-lock"><b><%= r.email %></b></small>
 					</td>
 		
 				<% end %>
@@ -41,7 +41,8 @@
 <% end %>
 
 
-<h3 class="titles_index">Categorias Produtos(<%= link_to 'Crie Uma', new_category_path %>)</h3>
+<h3 class="titles_index">Categorias Produtos(<%= link_to 'Crie Uma', new_category_path %>)</h3> - 
+<%= link_to "Ver todos", :controller => "admin", :action => "list" %>
 <h3 class="titles_index">Produtos(<%= link_to 'Crie Um', new_product_path %>)</h3>
 
 <h3 class="titles_index">Mensagens de Contato</h3>

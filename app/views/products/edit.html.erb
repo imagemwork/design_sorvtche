@@ -1,24 +1,8 @@
-<h1>Editing product</h1>
+<h1>Editando Produto</h1>
 
 <% form_for(@product) do |f| %>
-  <%= f.error_messages %>
-
-  <p>
-    <%= f.text_field :name %>
-  </p>
-  <p>
-    <%= f.text_field :name %>
-  </p>
-  <p>
-    <%= f.text_field :weight %>
-  </p>
-  <p>
-    <%= f.text_field :ingredients %>
-  </p>
-  <p>
-    <%= f.submit 'Update' %>
+   <%= render :partial => "form", :locals => {:f => f}%>
   </p>
 <% end %>
 
-<%= link_to 'Show', @product %> |
 <%= link_to 'Back', products_path %>
