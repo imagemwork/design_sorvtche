@@ -10,6 +10,10 @@ class AdminController < ApplicationController
 	def list
 	 @products = Product.all
 	end
+	
+	def list_categories
+	 @categories = Category.all
+	end
 
 	def check_recipes
 	

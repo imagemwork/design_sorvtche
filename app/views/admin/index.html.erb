@@ -41,9 +41,9 @@
 <% end %>
 
 
-<h3 class="titles_index">Categorias Produtos(<%= link_to 'Crie Uma', new_category_path %>)</h3> - 
-<%= link_to "Ver todos", :controller => "admin", :action => "list" %>
-<h3 class="titles_index">Produtos(<%= link_to 'Crie Um', new_product_path %>)</h3>
+<h3 class="titles_index">Categorias Produtos(<%= link_to 'Crie Uma', new_category_path %>) - <%= link_to "Ver todas", :controller => "admin", :action => "list_categories" %></h3> 
+
+<h3 class="titles_index">Produtos(<%= link_to 'Crie Um', new_product_path %>) - <%= link_to "Ver todos", :controller => "admin", :action => "list" %></h3> </h3>
 
 <h3 class="titles_index">Mensagens de Contato</h3>
 

@@ -1,6 +1,6 @@
 class Product < ActiveRecord::Base
 
-	belongs_to :categories
+	belongs_to :category
 	
 	has_attached_file :produto,
                     :styles => { :medium => "300x300>",
