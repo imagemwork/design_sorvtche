@@ -13,10 +13,34 @@
 		<![endif]-->
 
 		<script type="text/javascript">
+			function mycarousel_initCallback(carousel)
+			{
+			    // Disable autoscrolling if the user clicks the prev or next button.
+			    carousel.buttonNext.bind('click', function() {
+			        carousel.startAuto(0);
+			    });
+
+			    carousel.buttonPrev.bind('click', function() {
+			        carousel.startAuto(0);
+			    });
+
+			    // Pause autoscrolling if the user moves with the cursor over the clip.
+			    carousel.clip.hover(function() {
+			        carousel.stopAuto();
+			    }, function() {
+			        carousel.startAuto();
+			    });
+			};
+
 			jQuery(document).ready(function() {
-					jQuery('#mycarousel').jcarousel();
+			    jQuery('#mycarousel').jcarousel({
+			        auto: 5,
+			        wrap: 'last',
+			        initCallback: mycarousel_initCallback
+			    });
 			});
 		</script>
+
 	</head>
 	<body>
 		<div id="pnlAll">
@@ -29,7 +53,7 @@
 						</li>
 						<li class="<%= yield(:produtos) %>"><%= link_to "Produtos", products_path %></li>
 						<li class="<%= yield(:recipes) %>"><%= link_to "Receitas", recipes_path %></li>
-						<li class="<%= yield(:franquias) %>"><%= link_to "Franquias", :action => "franquias" %></li>
+						<li class="<%= yield(:franquias) %>"><%= link_to "Eventos", :action => "franquias" %></li>
 						<li class="<%= yield(:contato) %>"><%= link_to "Contato", new_contact_path %></li>
 					</ul>	
 					
@@ -43,14 +67,17 @@
 					<div id="pnlSlides">
 						<ul id="mycarousel" class="jcarousel-skin-tango">
 							<% produtos %>
+							
 							<% @products.each do |p| %>
 								<li>
-									<%= link_to image_tag(p.produto.url(:thumb), :width => 80, :height => 70, :border => 0), 
-																		:controller => "products",
+									<%= link_to image_tag(p.produto.url(:thumb), :width => 80, :height => 70, :border => 0,
+									 									:class=>"products-index"),
+																		{:controller => "products",
 																		:action => "show",
-																		:id => p.categories_id %>
+																		:id => p.categories_id} %>
 								</li>
 							<% end %>
+
 						</ul>
 					</div>
 					<div id="pnlContentSilver">

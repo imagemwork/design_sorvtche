@@ -243,3 +243,10 @@ body {
 	position: relative;
 	top: 3px;
 }
+
+#name {
+	width: 100px;
+	background: red;
+	float: left;
+
+}
