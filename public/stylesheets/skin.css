@@ -1,5 +1,5 @@
 .jcarousel-skin-tango .jcarousel-container {
-	height: px;
+	background: ;
 }
 
 .jcarousel-skin-tango .jcarousel-container-horizontal {
@@ -64,10 +64,6 @@
     height: 70px;
     cursor: pointer;
     background: transparent url(/images/anterior.jpg) no-repeat 0 0;
-}
-
-.jcarousel-skin-tango .jcarousel-prev-horizontal:hover {
-    background-position: -32px 0;
 }
 
 .products-index {

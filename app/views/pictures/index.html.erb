@@ -1,0 +1,18 @@
+<%- selected(:eventos) %>
+
+<h3 class="titles_index">Eventos</h3>
+<br />
+
+<div id="pnlEvents">
+	<% @events.each do |e| %>
+	
+		<div id="show-event">
+		
+			<%= image_tag(e.event.url(:thumb)) %><br />
+			<%= link_to e.title, :controller => "pictures", :action => "show", :id => e.id %>
+
+		</div>
+	
+
+	<% end %>
+</div>

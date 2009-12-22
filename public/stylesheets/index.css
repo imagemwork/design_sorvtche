@@ -116,14 +116,11 @@ body {
 
 #logo-contato {
 	width: 140px;
-	background: #fff;
+	color: #666;
 	padding: 10px;
 	margin: 10px auto;
+	text-align: center;
 	display: table;
-	border: 2px solid #ccc;
-	border-radius: 0.7em;
-	-moz-border-radius: 0.7em;
-	-webkit-border-radius: 0.7em; 
 }
 
 #new-recipe .input-text { font-size: 22px; width: 350px ;padding: 2px; border: 1px solid #D2D2D2; background: #FBFBFB }
@@ -152,6 +149,8 @@ body {
 	margin: 0 auto;
 	display: table;
 }
+
+
 
 #show-categories {
 	width: 120px;
@@ -248,5 +247,27 @@ body {
 	width: 100px;
 	background: red;
 	float: left;
+}
 
+#show-event {
+	width: 195px;
+	height: 170px;
+	float: left;
+	margin: 5px;
+	padding: 20px 0px 0px 0px;
+	float: left;
+	text-align: center;
+	background: url("/images/show-event2.jpg") no-repeat center top;
+}
+
+#show-event a {
+	margin-top: 5px;
+	color: #333;
+}
+
+#pnlEvents {
+	width: 620px;
+	height: auto;
+	margin: 0 auto;
+	display: table;
 }

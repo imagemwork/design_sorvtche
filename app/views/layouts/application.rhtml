@@ -3,7 +3,7 @@
 		<meta http-equiv="Content-type" content="text/html; charset=utf-8" />
 		<title>Sorvtche</title>
 		<%= stylesheet_link_tag "index", "menu", "jquery.jcarousel.css", "skin" %>
-		<%= javascript_include_tag "jquery", "menu", "jquery.jcarousel.pack" %>
+		<%= javascript_include_tag "jquery", "menu", "jquery.jcarousel.pack", "slider" %>
 		
 		<!--[if IE]>
 			<%= stylesheet_link_tag "ie" %>
@@ -11,35 +11,6 @@
 		<!--[if IE 6]>
 			<%= stylesheet_link_tag "ie6" %>
 		<![endif]-->
-
-		<script type="text/javascript">
-			function mycarousel_initCallback(carousel)
-			{
-			    // Disable autoscrolling if the user clicks the prev or next button.
-			    carousel.buttonNext.bind('click', function() {
-			        carousel.startAuto(0);
-			    });
-
-			    carousel.buttonPrev.bind('click', function() {
-			        carousel.startAuto(0);
-			    });
-
-			    // Pause autoscrolling if the user moves with the cursor over the clip.
-			    carousel.clip.hover(function() {
-			        carousel.stopAuto();
-			    }, function() {
-			        carousel.startAuto();
-			    });
-			};
-
-			jQuery(document).ready(function() {
-			    jQuery('#mycarousel').jcarousel({
-			        auto: 5,
-			        wrap: 'last',
-			        initCallback: mycarousel_initCallback
-			    });
-			});
-		</script>
 
 	</head>
 	<body>
@@ -53,7 +24,7 @@
 						</li>
 						<li class="<%= yield(:produtos) %>"><%= link_to "Produtos", products_path %></li>
 						<li class="<%= yield(:recipes) %>"><%= link_to "Receitas", recipes_path %></li>
-						<li class="<%= yield(:franquias) %>"><%= link_to "Eventos", :action => "franquias" %></li>
+						<li class="<%= yield(:eventos) %>"><%= link_to "Eventos", pictures_path %></li>
 						<li class="<%= yield(:contato) %>"><%= link_to "Contato", new_contact_path %></li>
 					</ul>	
 					
