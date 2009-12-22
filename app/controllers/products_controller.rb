@@ -3,12 +3,14 @@ class ProductsController < ApplicationController
 	layout "admin", :only => ["new", "edit"]
 
   def index
+  	
   	@categories = Category.all
   	@products = Product.all
 	
     respond_to do |format|
       format.html { render :layout => "application" }
     end
+    
   end
 
   # GET /products/1
