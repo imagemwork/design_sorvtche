@@ -1,6 +1,6 @@
 class EventsController < ApplicationController
 
-  layout "application"
+  layout "admin", :only => 'new'
 
   def index
     @events = Event.all

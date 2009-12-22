@@ -16,7 +16,12 @@
 	<body>
 		<div id="pnlAll">
 			<div id="pnlHeader">
-					
+				<div id="links-topo">
+					<p>
+						<%= image_tag("login-index.jpg", :class=>"empresa-index") %>login   
+						<%= image_tag("empresa.jpg", :class=>"empresa-index") %>empresa 
+					</p>
+				</div>
 				<div id="pnlMenu">
 					<ul id="topnav" class="V2">
 						<li class="<%= yield(:home) %>"><%= link_to image_tag("home.png", :border=>0, :class => "avril"), 

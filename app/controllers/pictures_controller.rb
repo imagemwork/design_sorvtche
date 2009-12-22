@@ -1,14 +1,14 @@
 class PicturesController < ApplicationController
 
-  layout "application"
+  layout "admin", :only => ['new', 'edit']
 
   def index
     @pictures = Picture.all
     @events = Event.all
 
     respond_to do |format|
-      format.html # index.html.erb
-      format.xml  { render :xml => @pictures }
+      format.html { render :layout => "application" }
+      
     end
   end
 
@@ -19,8 +19,7 @@ class PicturesController < ApplicationController
 
 
     respond_to do |format|
-      format.html # show.html.erb
-      format.xml  { render :xml => @picture }
+      format.html { render :layout => "application" }
     end
   end
 

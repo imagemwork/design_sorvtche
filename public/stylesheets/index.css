@@ -25,6 +25,18 @@ body {
 	text-align: right;
 	font-size: 10px;
 }
+	#links-topo {
+		position: relative;
+		top: 20px;
+		right: 30px;
+		color: #efefef;
+		text-transform: uppercase;
+		font-size: 9px;
+		font-family: Verdana, Helvetica, Sans-serif;
+		font-weight: normal;
+	
+	}
+	.empresa-index { position: relative; top: 1px; }
 #pnlMenu {
 	width: 470px;
 	height: auto;
@@ -259,6 +271,11 @@ body {
 	text-align: center;
 	background: url("/images/show-event2.jpg") no-repeat center top;
 }
+#show-event:hover {
+	background: url("/images/show-event-hover.jpg") no-repeat center top;
+}
+
+
 
 #show-event a {
 	margin-top: 5px;
