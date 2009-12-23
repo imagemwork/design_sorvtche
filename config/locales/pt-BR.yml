@@ -1,0 +1,45 @@
+
+#Mudar Aqui para os models
+pt-BR:
+  activerecord:
+    models:
+      product: "Produto"
+      recipe: "Receitas"
+      contact: "Contato"
+    attributes:
+      product:
+        name: "Nome"
+        ingredients: "Ingredientes"
+        weight: "Peso"
+        code: "Código"
+        picture: "Imagem"
+
+      recipe:
+          person_name: "Seu nome"
+          email: "E-mail"
+          name: "Nome da receita"
+          ingredients: "Ingredientes"
+          preparation: "Preparo"
+          tip: "Dica"
+    
+        
+    errors:
+      template:
+        header:
+          one: "{{model}} Não posso salvar: 1 erro"
+          other: "{{model}} não pôde ser salvo: {{count}} erros."
+        body: "Por favor, verifique os seguintes campos em destaque:"
+      messages:
+        inclusion: "não está incluso na lista"
+        exclusion: "não está disponível"
+        invalid: "não é válido"
+        confirmation: "não bate com a confirmação"
+        accepted: "precisa ser aceito"
+        empty: "não pode ser vazio"
+        blank: "não pode ser vazio"
+        too_long: "é muito longo (não mais do que {{count}} caracteres)"
+        too_short: "é muito curto (não menos do que {{count}} caracteres)"
+        wrong_length: "não é do tamanho correto (precisa ter {{count}} caracteres)"
+        taken: "já esta cadastrado"
+        not_a_number: "não é um número"
+        greater_than: "precisa ser maior do que {{count}}"

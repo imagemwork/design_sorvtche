@@ -118,7 +118,9 @@ body {
 
 #show-recipe { float: right; }
 
-#new-recipe, #new-contact label { font-size: 14px; font-weight: bold; color: #666 }
+#new-recipe, #new-contact label { font-size: 14px; font-weight: bold; color: #333 }
+.cor-validacao {  font-size: 14px; font-weight: bold; color: #333  }
+
 
 .text-contact { color: #666; text-align: center; }
 
