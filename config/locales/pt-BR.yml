@@ -7,6 +7,9 @@ pt-BR:
       recipe: "Receitas"
       contact: "Contato"
       textevent: "Texto Eventos"
+      event: "Evento"
+      picture: "Foto de Evento"
+      category: "Categoria"
     attributes:
       product:
         name: "Nome"
@@ -14,7 +17,6 @@ pt-BR:
         weight: "Peso"
         code: "Código"
         picture: "Imagem"
-
       recipe:
           person_name: "Seu nome"
           email: "E-mail"
@@ -22,12 +24,20 @@ pt-BR:
           ingredients: "Ingredientes"
           preparation: "Preparo"
           tip: "Dica"
-        
       textevent:
         title: "Título"
         location: "Local"
         description: "Descrição"
         city: "Cidade"
+      event:
+        title: "Título"
+        event: "Foto"
+      picture:
+        name: "Nome"
+      category:
+        title: "Título"    
+        
+    
         
     errors:
       template:

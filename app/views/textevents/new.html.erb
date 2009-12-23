@@ -1,3 +1,5 @@
+<%= render :partial => "shared/editor" %>
+
 <h3 class="titles_index">Novo Texto</h3>
 
 <% form_for(@textevent) do |f| %>
@@ -28,5 +30,7 @@
 		<%= f.submit "Criar" %>
 	</p>
 
-
 <% end %>
+
+<%= link_to 'Voltar', admin_index_path %>
+

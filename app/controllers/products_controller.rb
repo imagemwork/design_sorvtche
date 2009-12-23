@@ -49,10 +49,8 @@ class ProductsController < ApplicationController
       if @product.save
         flash[:notice] = 'Product was successfully created.'
         format.html { redirect_to(:controller => "admin", :action => "index") }
-        format.xml  { render :xml => @product, :status => :created, :location => @product }
       else
-        format.html { render :action => "new" }
-        format.xml  { render :xml => @product.errors, :status => :unprocessable_entity }
+        format.html { render :action => "new", :layout => "admin" }
       end
     end
   end
@@ -66,10 +64,8 @@ class ProductsController < ApplicationController
       if @product.update_attributes(params[:product])
         flash[:notice] = 'Produto Alterado com Sucesso!'
         format.html { redirect_to(:controller => "admin", :action => "list") }
-        format.xml  { head :ok }
       else
-        format.html { render :action => "edit" }
-        format.xml  { render :xml => @product.errors, :status => :unprocessable_entity }
+        format.html { render :action => "edit", :layout => "admin" }
       end
     end
   end

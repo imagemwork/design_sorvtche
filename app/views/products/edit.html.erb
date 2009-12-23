@@ -1,5 +1,7 @@
 <h3 class="titles_index">Editando produto</h3>
 
+<%= render :partial => "shared/editor" %>
+
 <% form_for(@product) do |f| %>
    <%= render :partial => "form", :locals => {:f => f}%>
   </p>

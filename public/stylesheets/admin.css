@@ -46,3 +46,5 @@ a {
 .table-contact th { padding: 5px; font-size: 13px; background: #666; font-size: 13px; color: #ccc;}
 
 #flash_admin { background: #FAFFAF; padding: 5px; font-weight: bold; font-size: 14px; color: #666; }
+
+.errorExplanation { padding: 10px; background: #FAFFAF; }

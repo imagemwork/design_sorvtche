@@ -1,5 +1,6 @@
-<h3 class="titles_index">Novo Produto</h3>
+<%= render :partial => "shared/editor" %>
 
+<h3 class="titles_index">Novo Produto</h3>
 
 <% form_for :product, @product, :url => products_path, :html => { :multipart => true } do |f| %>
   <%= f.error_messages %>
@@ -25,7 +26,7 @@
   	<%= f.file_field :produto %>
   </p>
   <p>
-    <%= f.label("Escolha a categoria") %><br />
+    <%= f.label("Escolha a categoria:") %>
     <%= f.collection_select :category_id, Category.all, :id, :title %>
   </p>
   <p>

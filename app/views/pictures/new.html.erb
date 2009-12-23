@@ -8,7 +8,7 @@
     <%= f.text_field :name %>
   </p>
   <p>
-    <%= f.label("Escolha o evento") %><br />
+    <%= f.label("Escolha o evento:") %>
     <%= f.collection_select :event_id, Event.all, :id, :title %>
   </p>
   <p>

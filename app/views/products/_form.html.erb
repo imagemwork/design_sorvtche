@@ -17,7 +17,7 @@
     <%= f.text_area :ingredients %>
   </p>
   <p>
-    <%= f.label("Escolha a categoria") %><br />
+    <%= f.label("Escolha a categoria: ") %>
     <%= f.collection_select :category_id, Category.all, :id, :title %>
   </p>
   <p>

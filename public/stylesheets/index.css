@@ -145,6 +145,8 @@ body {
 
 .errorExplanation li { list-style: none; }
 
+.errorExplanation h2 { font-size: 15px; color: #000; margin-bottom: 10px; }
+
 .errorExplanation { width: 280px; float: right; padding: 2px; margin-top: 20px; background: #FFCECE; border: 1px solid #FF6262; -moz-border-radius:0.5em; }
 
 #flash_notice { width: 650px; padding: 5px; background: #BCDD5A ; border: 1px solid #80C31C; color: #333; font-weight: bold ;-moz-border-radius:0.5em; font-size: 12px; margin-bottom: 10px; }
@@ -174,6 +176,7 @@ body {
 	border: 2px solid #CCC;
 	background: #FFF;
 	text-align: center;
+	position: relative;
 	float: left;
 	border-radius: 0.7em;
 	-moz-border-radius: 0.7em;
@@ -237,9 +240,13 @@ body {
 #pnlRecipeRight { width: 300px; float: right; color: #666; text-align: justify; }
 
 .box {
+	position: absolute;
+	bottom:2px;
+	left: 2px;
+	
 	text-align: center;
 	height: 20px;
-	width: auto;
+	width: 99%;
 	color: white;
 	font-size: 12px;
 	font-weight: bold;
@@ -282,6 +289,7 @@ body {
 #show-event a {
 	margin-top: 5px;
 	color: #333;
+	font-weight: bold;
 }
 
 #pnlEvents {
@@ -289,4 +297,13 @@ body {
 	height: auto;
 	margin: 0 auto;
 	display: table;
+}
+
+.intro-categories {
+	color: #000;
+	font-size: 13px;
+}
+
+.margem {
+	margin-left: 25px;
 }

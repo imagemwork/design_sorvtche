@@ -48,7 +48,7 @@ class EventsController < ApplicationController
         flash[:admin] = 'Evento criado com sucesso.'
         format.html { redirect_to(admin_index_path) }
       else
-        format.html { render :action => "new" }
+        format.html { render :action => "new", :layout => "admin" }
       end
     end
   end

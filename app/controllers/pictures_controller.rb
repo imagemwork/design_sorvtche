@@ -49,7 +49,7 @@ class PicturesController < ApplicationController
         flash[:admin] = 'Foto adicionada com sucesso.'
         format.html { redirect_to(new_picture_path) }
       else
-        format.html { render :action => "new" }
+        format.html { render :action => "new", :layout => "admin" }
       end
     end
   end
