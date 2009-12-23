@@ -6,6 +6,11 @@
 	</head>
 	<body>
 		<div id="pnlAll">
+			
+			<% unless flash[:admin].blank? %>
+				<div id="flash_admin"><%= flash[:admin] %></div>
+			<% end %>
+			
 			<%= yield %>
 		</div>
 	</body>

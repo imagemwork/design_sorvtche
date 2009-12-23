@@ -1,8 +1,8 @@
-<h1>Editando Produto</h1>
+<h3 class="titles_index">Editando produto</h3>
 
 <% form_for(@product) do |f| %>
    <%= render :partial => "form", :locals => {:f => f}%>
   </p>
 <% end %>
 
-<%= link_to 'Back', products_path %>
+<%= link_to 'Voltar', list_admin_path %>

@@ -1,7 +1,7 @@
-<h3>Lista de Todos os Produtos</h3>
+<h3 class="titles_index">Lista de todos os produtos</h3>
 
 <% @products.each do |p| %>
-	<p><%= p.name %> - <%= link_to 'Deletar', p, :confirm => 'Voce tem certeza?', :method => :delete %> -<%= link_to 'Editar', edit_product_path(p) %></p>
+	<p><%= p.name %> - <%= link_to 'Deletar', p, :confirm => 'Voce tem certeza?', :method => :delete %> - <%= link_to 'Editar', edit_product_path(p) %></p>
 <% end -%>
 
 <%= link_to 'Voltar', :controller => :admin%>

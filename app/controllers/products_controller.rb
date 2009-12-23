@@ -16,7 +16,7 @@ class ProductsController < ApplicationController
   # GET /products/1
   # GET /products/1.xml
   def show
-    @products = Product.all(:conditions => "categories_id = '#{params[:id]}'")
+    @products = Product.all(:conditions => "category_id = '#{params[:id]}'")
 		@category = Category.find(params[:id])
     respond_to do |format|
       format.html { render :layout => "application" }

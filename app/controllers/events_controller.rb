@@ -45,12 +45,10 @@ class EventsController < ApplicationController
 
     respond_to do |format|
       if @event.save
-        flash[:notice] = 'Event was successfully created.'
-        format.html { redirect_to(@event) }
-        format.xml  { render :xml => @event, :status => :created, :location => @event }
+        flash[:admin] = 'Evento criado com sucesso.'
+        format.html { redirect_to(admin_index_path) }
       else
         format.html { render :action => "new" }
-        format.xml  { render :xml => @event.errors, :status => :unprocessable_entity }
       end
     end
   end
@@ -62,12 +60,10 @@ class EventsController < ApplicationController
 
     respond_to do |format|
       if @event.update_attributes(params[:event])
-        flash[:notice] = 'Event was successfully updated.'
-        format.html { redirect_to(@event) }
-        format.xml  { head :ok }
+        flash[:admin] = 'Evento atualizado com sucesso.'
+        format.html { redirect_to(admin_index_path) }
       else
         format.html { render :action => "edit" }
-        format.xml  { render :xml => @event.errors, :status => :unprocessable_entity }
       end
     end
   end

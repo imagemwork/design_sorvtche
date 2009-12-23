@@ -1,4 +1,4 @@
-<h3>Lista de Todas as Categorias</h3>
+<h3 class="titles_index">Lista de todas as categorias</h3>
 
 <% @categories.each do |c| %>
 	<p><%= c.title %> - <%= link_to 'Deletar', c, :confirm => 'Isso irá deletar todos os produtos que esta categoria tem. Voce tem certeza?', :method => :delete %> -<%= link_to 'Editar', edit_category_path(c) %></p>

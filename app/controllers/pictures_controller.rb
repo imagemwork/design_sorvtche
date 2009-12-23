@@ -46,12 +46,10 @@ class PicturesController < ApplicationController
 
     respond_to do |format|
       if @picture.save
-        flash[:notice] = 'Picture was successfully created.'
-        format.html { redirect_to(@picture) }
-        format.xml  { render :xml => @picture, :status => :created, :location => @picture }
+        flash[:admin] = 'Foto adicionada com sucesso.'
+        format.html { redirect_to(new_picture_path) }
       else
         format.html { render :action => "new" }
-        format.xml  { render :xml => @picture.errors, :status => :unprocessable_entity }
       end
     end
   end
@@ -63,12 +61,10 @@ class PicturesController < ApplicationController
 
     respond_to do |format|
       if @picture.update_attributes(params[:picture])
-        flash[:notice] = 'Picture was successfully updated.'
-        format.html { redirect_to(@picture) }
-        format.xml  { head :ok }
+        flash[:admin] = 'Dados atualizados com sucesso.'
+        format.html { redirect_to(admin_index_path) }
       else
         format.html { render :action => "edit" }
-        format.xml  { render :xml => @picture.errors, :status => :unprocessable_entity }
       end
     end
   end

@@ -1,7 +1,7 @@
 <%= f.error_messages %>
 
   <p>
-    <%= f.label :codigo %><br />
+    <%= f.label :código %><br />
     <%= f.text_field :code %>
   </p>
   <p>
@@ -9,7 +9,7 @@
     <%= f.text_field :name %>
   </p>
   <p>
-    <%= f.label :weight %><br />
+    <%= f.label :peso %><br />
     <%= f.text_field :weight %>
   </p>
   <p>
@@ -17,10 +17,9 @@
     <%= f.text_area :ingredients %>
   </p>
   <p>
-    <%= f.label :categorias %><br />
-    <%= f.collection_select :categories_id, Category.all, :id, :title %>
+    <%= f.label("Escolha a categoria") %><br />
+    <%= f.collection_select :category_id, Category.all, :id, :title %>
   </p>
-  <br />
   <p>
-    <%= f.submit 'Create' %>
+    <%= f.submit 'Criar' %>
   </p>

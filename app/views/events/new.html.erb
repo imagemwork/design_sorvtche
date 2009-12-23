@@ -1,19 +1,19 @@
-<h1>New event</h1>
+<h3 class="titles_index">Novo Evento</h3>
 
 <% form_for :event, @event, :url => events_path, :html => { :multipart => true } do |f| %>
   <%= f.error_messages %>
 
   <p>
-    <%= f.label :title %><br />
+    <%= f.label :título %><br />
     <%= f.text_field :title %>
   </p>
-	<br />
   <p>
+	<%= f.label :foto %><br />
 	<%= f.file_field :event %>
    </p>
   <p>
-    <%= f.submit 'Create' %>
+    <%= f.submit 'Criar' %>
   </p>
 <% end %>
 
-<%= link_to 'Back', events_path %>
+<%= link_to 'Voltar', admin_index_path %>
