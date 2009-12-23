@@ -1,0 +1,32 @@
+<h3 class="titles_index">Novo Texto</h3>
+
+<% form_for(@textevent) do |f| %>
+
+	<div class="cor-validacao"><%= f.error_messages %></div>
+
+	<p>
+		<%= f.label("Título") %><br />
+		<%= f.text_field :title %>
+	</p>
+	<p>
+		<%= f.label("Local") %><br />
+		<%= f.text_field :location %>
+	</p>
+	<p>
+		<%= f.label("Cidade") %><br />
+		<%= f.text_field :city %>
+	</p>
+	<p>
+		<%= f.label("Descrição") %><br />
+		<%= f.text_area :description %>
+	</p>
+	<p>
+		<%= f.label("Escolha o evento: ") %>
+		<%= f.collection_select :event_id, Event.all, :id, :title %>
+	</p>
+	<p>
+		<%= f.submit "Criar" %>
+	</p>
+
+
+<% end %>

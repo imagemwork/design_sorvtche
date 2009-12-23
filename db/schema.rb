@@ -9,7 +9,7 @@
 #
 # It's strongly recommended to check this file into your version control system.
 
-ActiveRecord::Schema.define(:version => 20091223123420) do
+ActiveRecord::Schema.define(:version => 20091223162008) do
 
   create_table "categories", :force => true do |t|
     t.string   "title"
@@ -42,7 +42,6 @@ ActiveRecord::Schema.define(:version => 20091223123420) do
 
   create_table "pictures", :force => true do |t|
     t.string   "name"
-    t.text     "description"
     t.integer  "event_id"
     t.datetime "created_at"
     t.datetime "updated_at"
@@ -76,6 +75,16 @@ ActiveRecord::Schema.define(:version => 20091223123420) do
     t.boolean  "passed"
     t.datetime "created_at"
     t.datetime "updated_at"
+  end
+
+  create_table "textevents", :force => true do |t|
+    t.string   "title"
+    t.string   "location"
+    t.text     "description"
+    t.datetime "created_at"
+    t.datetime "updated_at"
+    t.string   "city"
+    t.integer  "event_id"
   end
 
 end

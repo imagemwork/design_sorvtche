@@ -49,7 +49,7 @@ class CategoriesController < ApplicationController
         format.html { redirect_to(:controller => "admin") }
         format.xml  { render :xml => @category, :status => :created, :location => @category }
       else
-        format.html { render :action => "new" }
+        format.html { render :action => "new", :layout => "admin" }
         format.xml  { render :xml => @category.errors, :status => :unprocessable_entity }
       end
     end

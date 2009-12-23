@@ -6,6 +6,7 @@ pt-BR:
       product: "Produto"
       recipe: "Receitas"
       contact: "Contato"
+      textevent: "Texto Eventos"
     attributes:
       product:
         name: "Nome"
@@ -21,7 +22,12 @@ pt-BR:
           ingredients: "Ingredientes"
           preparation: "Preparo"
           tip: "Dica"
-    
+        
+      textevent:
+        title: "Título"
+        location: "Local"
+        description: "Descrição"
+        city: "Cidade"
         
     errors:
       template:

@@ -8,10 +8,6 @@
     <%= f.text_field :name %>
   </p>
   <p>
-    <%= f.label :descrição %><br />
-    <%= f.text_area :description %>
-  </p>
-  <p>
     <%= f.label("Escolha o evento") %><br />
     <%= f.collection_select :event_id, Event.all, :id, :title %>
   </p>
