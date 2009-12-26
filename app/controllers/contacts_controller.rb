@@ -1,5 +1,6 @@
 class ContactsController < ApplicationController
 
+  before_filter :authenticate, :only => [:edit, :destroy]
   layout "application"
 
   def index

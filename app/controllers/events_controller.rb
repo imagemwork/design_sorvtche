@@ -1,5 +1,6 @@
 class EventsController < ApplicationController
 
+  before_filter :authenticate, :only => [:new, :edit, :destroy]
   layout "admin", :only => 'new'
 
   def index

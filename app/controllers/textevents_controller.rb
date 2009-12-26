@@ -1,5 +1,6 @@
 class TexteventsController < ApplicationController
   
+  before_filter :authenticate, :only => [:new, :edit, :destroy]
   layout "admin"  
     
   def new

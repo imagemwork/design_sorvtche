@@ -1,5 +1,6 @@
 class ProductsController < ApplicationController
 
+  before_filter :authenticate, :only => [:new, :edit, :destroy]
 	layout "admin", :only => ["new", "edit"]
 
   def index
