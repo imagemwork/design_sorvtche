@@ -34,9 +34,12 @@ body {
 		font-size: 9px;
 		font-family: Verdana, Helvetica, Sans-serif;
 		font-weight: normal;
-	
 	}
-	.empresa-index { position: relative; top: 1px; }
+	#links-topo a {
+		color: #fff;
+	}
+	
+	.empresa-index { position: relative; top: 2px; }
 #pnlMenu {
 	width: 470px;
 	height: auto;
@@ -86,15 +89,18 @@ body {
 	height: auto;
 	float: left;
 }
+
 	#pnlReceitas {
 		height: 135px;
 		padding: 3px;
 	}
+
 	#pnlSobre {
 		height: auto;
 		padding: 3px;
 		border-bottom: 5px dotted #666;
 	}
+
 #pnlOrcamentos {
 	width: 320px;
 	height: 280px;
@@ -102,6 +108,7 @@ body {
 	padding: 3px 3px 3px 10px;
 	border-left: 5px dotted #666;
 }
+
 #pnlFooter {
 	width: 300px;
 	height: auto;
@@ -110,6 +117,7 @@ body {
 	font-size: 13px;
 	color: #999;
 }
+
 .titles_index {	font-size: 20px;	color: #666; }
 
 .align-arrow { position: relative; top: 3px; margin-right: 2px;}
@@ -165,8 +173,6 @@ body {
 	margin: 0 auto;
 	display: table;
 }
-
-
 
 #show-categories {
 	width: 120px;
@@ -243,7 +249,6 @@ body {
 	position: absolute;
 	bottom:2px;
 	left: 2px;
-	
 	text-align: center;
 	height: 20px;
 	width: 99%;
@@ -276,15 +281,26 @@ body {
 	float: left;
 	margin: 5px;
 	padding: 20px 0px 0px 0px;
-	float: left;
 	text-align: center;
 	background: url("/images/show-event2.jpg") no-repeat center top;
 }
-#show-event:hover {
-	background: url("/images/show-event-hover.jpg") no-repeat center top;
+
+
+#show-event-in {
+	width: 195px;
+	height: 170px;
+	float: left;
+	margin: 5px;
+	padding: 20px 0px 0px 0px;
+	text-align: center;
+	font-size: 12px;
+	background: url("/images/show-event-in.jpg") no-repeat center top;
 }
 
 
+#show-event:hover {
+	background: url("/images/show-event-hover.jpg") no-repeat center top;
+}
 
 #show-event a {
 	margin-top: 5px;
@@ -304,6 +320,20 @@ body {
 	font-size: 13px;
 }
 
-.margem {
-	margin-left: 25px;
+.margem { margin-left: 25px; }
+
+#textevent { 
+	width: 650px;
+	padding: 20px 5px 10px 10px;
+	font-weight: bold;
+	font-size: 12px;
+	color: #333;
+	background: url("/images/aspas.jpg") no-repeat left top;
+	position: relative;
+}
+
+#fuck {
+	width: 620px;
+	display: table;
+	margin: 0 auto;
 }

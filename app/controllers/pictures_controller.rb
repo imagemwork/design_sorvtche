@@ -16,7 +16,7 @@ class PicturesController < ApplicationController
   # GET /pictures/1.xml
   def show
     @pictures = Picture.find(:all, :conditions => "event_id = '#{params[:id]}'")
-
+    @textevent = Textevent.find(:all, :conditions => "event_id = '#{params[:id]}'")
 
     respond_to do |format|
       format.html { render :layout => "application" }

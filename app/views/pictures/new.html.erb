@@ -1,12 +1,16 @@
 <h3 class="titles_index">Nova Foto</h3>
 
-<% form_for(@picture) do |f| %>
+<% form_for :picture, @picture, :url => pictures_path, :html => { :multipart => true } do |f| %>
   <%= f.error_messages %>
 
   <p>
     <%= f.label :nome %><br />
     <%= f.text_field :name %>
   </p>
+  <p>
+	<%= f.label :foto %><br />
+	<%= f.file_field :picture %>
+   </p>
   <p>
     <%= f.label("Escolha o evento:") %>
     <%= f.collection_select :event_id, Event.all, :id, :title %>

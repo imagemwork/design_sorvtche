@@ -1,5 +1,24 @@
-<% @pictures.each do |p| %>
+<%- selected(:eventos) %>
 
-	<b><%= p.name %></b><br />
+<div id="textevent">
+	<% @textevent.each do |t| %>
+	<h3 class="titles_index"><%= t.title %><small> - <%= t.location %>, <%= t.city %></small></h3>
+		
+		<%= t.description %>
+	<% end %>
+</div>
 
-<% end %>
+<br />
+
+<div id="fuck">
+	<% @pictures.each do |p| %>
+		<div id="show-event-in">
+			<%= image_tag(p.picture.url(:thumb)) %><br />
+			<%= p.name %>
+		</div>
+	<% end %>
+</div>
+
+<br />
+<%= image_tag("arrow.png", :class=> "align-arrow") %>
+<%= link_to 'Voltar', pictures_path, :class => "style-link-recipe" %>
