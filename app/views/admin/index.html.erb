@@ -9,7 +9,7 @@
 		<% @recipes.each do |r| %>
 			<tr>
 				<td align="center" width="1%">
-					<%= link_to image_tag("trash.png", :border => 0), recipe_path(r), :method => :delete %>
+					<%= link_to image_tag("trash.png", :border => 0, :class => "lixo"), recipe_path(r), :method => :delete %>
 				</td>
 				<% if r.passed == false %>
 		
@@ -24,7 +24,7 @@
 				<% else %>
 		
 					<td align="center" width="5%">
-						<%= link_to image_tag("locked.png", :border => 0), :action => "lock", :id => r.id %>
+						<%= link_to image_tag("locked.png", :border => 0, :class => "cadeado"), :action => "lock", :id => r.id %>
 					</td>
 					<td>
 						<%= link_to r.name, r %> <small class="rest-lock"><b><%= r.created_at.strftime("%d/%m/%y") %> </b>por<b> <%= r.person_name %></b></small>

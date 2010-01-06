@@ -12,7 +12,7 @@
 		
 		<div id="logo-contato">
 			<%= image_tag("logo-contato.jpg") %><br /><br />
-			<p>Sorvtchê 2010 - Rua do Comércio, 93, Fone: (54) 3374-0000<br /> <b>Ibiaçá - RS</b></p>
+			<p>Sorvtchê 2010 - Rua Marechal Castelo Branco, 556 / Fone: (54) 3374-1286 / CEP: 99940-000 / CNPJ: 905335630001-38<br /> <b>Ibiaçá - RS</b></p>
 		</div>
 		
 	</div>
@@ -21,18 +21,18 @@
 	  <p>
 	    <%= f.label :nome %><br />
 	    <%= f.text_field :nome, :class => "input-text" %>
-	  </p>
+	  </p><br />
 	  <p>
 	    <%= f.label :assunto %><br />
 	    <%= f.text_field :assunto, :class => "input-text" %>
-	  </p>
+	  </p><br />
 	  <p>
 	    <%= f.label :email %><br />
 	    <%= f.text_field :email, :class => "input-text" %>
-	  </p>
+	  </p><br />
 	  <p>
 	    <%= f.label :mensagem %><br />
-	    <%= f.text_area :mensagem, :class => "input-text", :rows => 10, :style => "overflow: auto;" %>
+	    <%= f.text_area :mensagem, :class => "input-text", :rows => 10, :maxlenght => "130" ,:style => "overflow: auto;" %>
 	  </p>
 		<br />
 	  <p>

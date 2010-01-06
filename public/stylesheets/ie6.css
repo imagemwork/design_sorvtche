@@ -20,8 +20,28 @@
 	background: url("/images/name-products.jpg") no-repeat left center;
 }
 
+.jcarousel-skin-tango .jcarousel-item {
+    width: 117px;
+	height: 90px;
+	background: url("/images/back-index.jpg");
+	text-align:center;
+}
+
 #validacao-contact { width: 270px; text-align: center; }
 
 #formulario-contact { width: 360px; }
 
 .errorExplanation { width: 270px; }
+
+.box {
+	bottom:7px;
+	left: 7px;
+	width: 125px;
+}
+
+#all-products {	width: 640px; }
+
+#product-right {
+	height: 140px;
+	background: #F0F0F0;
+}

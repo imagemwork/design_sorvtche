@@ -9,23 +9,24 @@
 		<p>
 		  <%= f.label "Seu nome" %><br />
 		  <%= f.text_field :person_name, :class => "input-text" %>
-		</p>
+		</p><br />
 		<p>
 		  <%= f.label "Seu e-mail" %><br />
 		  <%= f.text_field :email, :class => "input-text" %>
-		</p>
+		</p><br />
 		<p>
 		  <%= f.label "Nome da Receita" %><br />
 		  <%= f.text_field :name, :class => "input-text" %>
-		</p>
+		</p><br />
 		<p>
 		  <%= f.label :ingredientes %><br />
-		  <%= f.text_area :ingredients, :rows => 5, :style => "overflow: auto;" %>
-		</p>
+		  <%= f.text_area :ingredients, :rows => 5, :style => "overflow: auto;" %><br/>
+	 	<small><i>Separe os ingredientes usando vírgulas(,)</i></small>
+		</p><br />
 		<p>
 		  <%= f.label :preparo %><br />
 		  <%= f.text_area :preparation, :rows => 5, :style => "overflow: auto;" %>
-		</p>
+		</p><br />
 		<p>
 		  <%= f.label :dica %><br />
 		  <%= f.text_area :tip, :rows => 5, :style => "overflow: auto;" %>

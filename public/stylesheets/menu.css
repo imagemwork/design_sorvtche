@@ -21,6 +21,7 @@ ul#topnav a, ul#topnav span {
 	text-transform: uppercase;
 	clear: both;
 	height: 20px;
+	
 	line-height: 20px;
 	background: #1d1d1d; 
 }

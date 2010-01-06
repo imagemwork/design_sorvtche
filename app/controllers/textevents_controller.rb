@@ -12,7 +12,7 @@ class TexteventsController < ApplicationController
     
     respond_to do |format|
       if @textevent.save
-        flash[:admin] = "deu"
+        flash[:admin] = "Texto Adicionado com sucesso!"
         format.html { redirect_to(new_textevent_path) }
       else
         format.html { render :action => "new" }

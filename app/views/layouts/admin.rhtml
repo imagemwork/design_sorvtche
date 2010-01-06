@@ -3,10 +3,12 @@
 		<meta http-equiv="Content-type" content="text/html; charset=utf-8" />
 		<title>Admin</title>
 		<%= stylesheet_link_tag "admin", "widgEditor" %>
-		
+		<!--[if IE]>
+			<%= stylesheet_link_tag "ie" %>
+		<![endif]-->
 	</head>
 	<body>
-		<div id="pnlAll">
+		<div id="pnlAllAdmin">
 			
 			<% unless flash[:admin].blank? %>
 				<div id="flash_admin"><%= flash[:admin] %></div>

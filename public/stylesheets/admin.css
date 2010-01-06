@@ -1,8 +1,12 @@
 body {
 	background: #fff url("/images/bakc.jpg") repeat-x top left;
 	font-family: Arial, Helvetica, Sans-serif;
+	
 }
-#pnlAll {
+
+.lixo, .cadeado { behavior: url(/fixie6/iepngfix.htc) }
+
+#pnlAllAdmin {
 	width: 800px;
 	height: auto;
 	padding: 5px;

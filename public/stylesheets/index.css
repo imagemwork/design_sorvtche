@@ -7,7 +7,7 @@ body {
 	background: #999 url("/images/back.jpg") no-repeat top center;
 }
 
-.align-arrow { behavior: url(/fixie6/iepngfix.htc) }
+.align-arrow, .transparente, .test { behavior: url(/fixie6/iepngfix.htc) }
 
 #pnlAll {
 	width: 1000px;
@@ -137,7 +137,7 @@ body {
 #formulario-contact { width: 360px; }
 
 #logo-contato {
-	width: 140px;
+	width: 210px;
 	color: #666;
 	padding: 10px;
 	margin: 10px auto;
@@ -152,6 +152,11 @@ body {
 #new-recipe textarea {  width: 350px ;padding: 2px; border: 1px solid #D2D2D2; background: #FBFBFB; height: 80px }
 
 .errorExplanation li { list-style: none; }
+
+.fieldWithErrors input {
+	padding: 0px;
+	margin: 0px;
+}
 
 .errorExplanation h2 { font-size: 15px; color: #000; margin-bottom: 10px; }
 
@@ -277,7 +282,7 @@ body {
 
 #show-event {
 	width: 195px;
-	height: 170px;
+	height: 180px;
 	float: left;
 	margin: 5px;
 	padding: 20px 0px 0px 0px;
@@ -288,7 +293,7 @@ body {
 
 #show-event-in {
 	width: 195px;
-	height: 170px;
+	height: 180px;
 	float: left;
 	margin: 5px;
 	padding: 20px 0px 0px 0px;
@@ -316,7 +321,7 @@ body {
 }
 
 .intro-categories {
-	color: #000;
+	color: #666;
 	font-size: 13px;
 }
 

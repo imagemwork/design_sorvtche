@@ -1,4 +1,5 @@
 body { text-align: center; }
+
 ul#topnav li{ 	height:38px; }
 #pnlMenu { width: 300px; }
 
@@ -8,6 +9,9 @@ ul#topnav li{ 	height:38px; }
 	background: #EFEFEF url("/images/home-top.jpg") no-repeat left top;
 }
 
+#pnlAllAdmin {
+	text-align: left;
+}
 
 .name-products{
 	-moz-border-radius: 0.7em;

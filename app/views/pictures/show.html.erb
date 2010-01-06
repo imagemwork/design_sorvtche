@@ -2,7 +2,8 @@
 
 <div id="textevent">
 	<% @textevent.each do |t| %>
-	<h3 class="titles_index"><%= t.title %><small> - <%= t.location %>, <%= t.city %></small></h3>
+	
+	<h3 class="titles_index"><%= t.title %><small> - <%= t.location %>, <%= t.city %></small></h3><small>(<%= t.created_at.strftime("%d/%m/%Y") %>)</small>
 		
 		<%= t.description %>
 	<% end %>
@@ -13,7 +14,10 @@
 <div id="fuck">
 	<% @pictures.each do |p| %>
 		<div id="show-event-in">
-			<%= image_tag(p.picture.url(:thumb)) %><br />
+			
+			<%= link_to image_tag(p.picture.url(:thumb), :border => 0), p.picture.url(:large), :title => p.name %>
+           
+			<br />
 			<%= p.name %>
 		</div>
 	<% end %>
