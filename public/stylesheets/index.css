@@ -142,7 +142,7 @@ body {
 	padding: 10px;
 	margin: 10px auto;
 	text-align: center;
-	display: table;
+	display: block;
 }
 
 #new-recipe .input-text { font-size: 22px; width: 350px ;padding: 2px; border: 1px solid #D2D2D2; background: #FBFBFB }

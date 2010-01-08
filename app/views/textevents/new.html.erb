@@ -23,8 +23,17 @@
 		<%= f.text_area :description, :cols => "80" %>
 	</p>
 	<p>
-		<%= f.label("Escolha o evento: ") %>
-		<%= f.collection_select :event_id, Event.all, :id, :title %>
+		<%= f.label("Marque o evento: ") %><br />
+
+		<div id="pnlEvents">
+			<% for c in @events %>
+				<div id="show-event">
+					<%= image_tag(c.event.url(:thumb)) %><br>
+					<%= f.radio_button :event_id, c.id %>
+					<%= c.title %>
+				</div>
+			<% end %>
+		</div>
 	</p>
 	<p>
 		<%= f.submit "Criar" %>

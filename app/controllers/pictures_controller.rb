@@ -18,7 +18,7 @@ class PicturesController < ApplicationController
   def show
     @pictures = Picture.find(:all, :conditions => "event_id = '#{params[:id]}'")
     @textevent = Textevent.find(:all, :conditions => "event_id = '#{params[:id]}'")
-
+    @event = Event.find(params[:id])
     respond_to do |format|
       format.html { render :layout => "application" }
     end

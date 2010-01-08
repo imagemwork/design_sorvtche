@@ -52,3 +52,22 @@ a {
 #flash_admin { background: #FAFFAF; padding: 5px; font-weight: bold; font-size: 14px; color: #666; }
 
 .errorExplanation { padding: 10px; background: #FAFFAF; }
+
+
+#show-event {
+	width: 195px;
+	height: 180px;
+	float: left;
+	margin: 5px;
+	padding: 20px 0px 0px 0px;
+	text-align: center;
+	background: url("/images/show-event2.jpg") no-repeat center top;
+}
+
+#pnlEvents {
+	width: 100%;
+	height: auto;
+	margin: 0 auto;
+	display: table;
+	background: #EFEFEF;
+}
