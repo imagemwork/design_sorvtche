@@ -1,6 +1,6 @@
 class AdminController < ApplicationController
 
-	before_filter :authenticate, :only => [:index, :check_recipes, :lock, :list, :list_categories, :list_textevents, :list_fotos]
+	before_filter :authenticate
 
 	def index
 		@recipes = Recipe.find(:all, :order => "id desc")

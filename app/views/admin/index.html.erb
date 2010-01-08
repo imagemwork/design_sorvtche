@@ -1,4 +1,4 @@
-<h3 class="titles_index">Receitas(<%= link_to 'envie uma', new_recipe_path %>)</h3>
+<h3 class="titles_index">Receitas(<%= image_tag("new.png", :class=> "align-arrow") %><%= link_to 'Envie uma', new_recipe_path %>)</h3>
 
 <% form_tag :action => "check_recipes" do %>
 	<div id="top-table">
@@ -43,7 +43,7 @@
 <% end %>
 
 
-<h3 class="titles_index">Eventos(<%= link_to 'Crie Um', new_event_path %>)</h3>
+<h3 class="titles_index">Eventos(<%= image_tag("new.png", :class=> "align-arrow") %><%= link_to 'Crie Um', new_event_path %>)</h3>
 
 <h3 class="titles_index">
 	Fotos de Eventos(<%= image_tag("new.png", :class=> "align-arrow") %><%= link_to 'Crie Um', new_picture_path %>) - 
