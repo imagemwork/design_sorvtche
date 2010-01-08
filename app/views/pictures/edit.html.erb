@@ -1,20 +1,19 @@
-<h1>Editing picture</h1>
+<h3 class="titles_index">Editando Evento</h3>
 
 <% form_for(@picture) do |f| %>
   <%= f.error_messages %>
 
   <p>
-    <%= f.label :name %><br />
+    <%= f.label :Nome %><br />
     <%= f.text_field :name %>
   </p>
   <p>
-    <%= f.label :event_id %><br />
-    <%= f.text_field :event_id %>
+    <%= f.label("Trocar de evento") %><br />
+    <%= f.collection_select :event_id, Event.all, :id, :title %>
   </p>
   <p>
-    <%= f.submit 'Update' %>
+    <%= f.submit 'Editar' %>
   </p>
 <% end %>
 
-<%= link_to 'Show', @picture %> |
-<%= link_to 'Back', pictures_path %>
+<%= link_to 'Voltar', :controller => :admin %>

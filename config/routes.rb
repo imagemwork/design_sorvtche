@@ -2,7 +2,7 @@ ActionController::Routing::Routes.draw do |map|
 
   map.resources :events, :contacts, :categories, :home, :products, :recipes, :pictures, :textevents
 
-  map.resources :admin, :collection => {:list => :get, :list_categories => :get, :list_textevents => :get}
+  map.resources :admin, :collection => {:list => :get, :list_categories => :get, :list_textevents => :get, :list_fotos => :get}
 
   map.with_options :controller => "home" do |home|
   	home.empresa "empresa", :action => "empresa"

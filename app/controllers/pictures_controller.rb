@@ -63,7 +63,7 @@ class PicturesController < ApplicationController
     respond_to do |format|
       if @picture.update_attributes(params[:picture])
         flash[:admin] = 'Dados atualizados com sucesso.'
-        format.html { redirect_to(admin_index_path) }
+        format.html { redirect_to(:controller => "admin", :action => "list_fotos") }
       else
         format.html { render :action => "edit" }
       end

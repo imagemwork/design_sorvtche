@@ -1,0 +1,24 @@
+<h3 class="titles_index">Todas as Fotos</h3><br />
+
+<div id="list-foto-delete">
+	<% @pictures.each do |p| %>
+	
+		<div id="list-foto">
+			<div id="list-top">
+				<%= link_to image_tag("trash.png", :border => 0, :class => "lixo"), picture_path(p), :method => :delete %>
+				<%= link_to image_tag("edit.png", :border => 0, :class => "lixo"), edit_picture_path(p) %>
+				<%= p.name %>
+				
+			
+			</div>
+			<%= image_tag(p.picture.url(:thumb)) %><br />
+			<span class="event-name"><b><%= p.event.title %></b></span>
+
+			<br /><br />
+		</div>
+	
+	<% end %>
+</div>
+
+<br />
+<%= link_to 'Voltar', :controller => :admin %>

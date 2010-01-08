@@ -1,7 +1,6 @@
 body {
 	background: #fff url("/images/bakc.jpg") repeat-x top left;
 	font-family: Arial, Helvetica, Sans-serif;
-	
 }
 
 .lixo, .cadeado { behavior: url(/fixie6/iepngfix.htc) }
@@ -53,7 +52,6 @@ a {
 
 .errorExplanation { padding: 10px; background: #FAFFAF; }
 
-
 #show-event {
 	width: 195px;
 	height: 180px;
@@ -71,3 +69,29 @@ a {
 	display: table;
 	background: #EFEFEF;
 }
+
+#list-foto-delete {	width: 100%; display: table; }
+
+#list-foto {
+	width: 200px;
+	height: 180px;
+	text-align: center;
+	float: left;
+	font-size: 13px;
+}
+
+#list-top {
+	width :147px;
+	height: 35px;
+	margin: 0 auto;
+	text-align: left;
+	padding: 2px 0px 0px 6px;
+	font-size: 11px;
+	color: #EBEBEB;
+	font-weight: bold;
+	background: url("/images/balao.jpg") no-repeat top center;
+}
+.align-arrow { position: relative; top: 3px; margin-right: 2px;}
+.lixo {	position: relative;	top: 2px; }
+
+.event-name { background: #FFFF88; color: #36393D;  padding: 2px 6px 2px 6px; font-size: 12px;}
