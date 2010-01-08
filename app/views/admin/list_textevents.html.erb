@@ -1,0 +1,9 @@
+<h3 class="titles_index">Lista de todos os textos</h3>
+
+<% @textevents.each do |c| %>
+	
+	<p><%= c.title %> - <%= link_to 'Deletar', c, :confirm => 'Você tem certeza?', :method => :delete %> -<%= link_to 'Editar', edit_textevent_path(c) %></p>
+
+<% end %>
+
+<%= link_to 'Voltar', :controller => :admin %>
