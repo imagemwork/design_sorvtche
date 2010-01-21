@@ -2,8 +2,11 @@
 	<head>
 		<meta http-equiv="Content-type" content="text/html; charset=utf-8" />
 		<title>Sorvtche - <%= yield(:title) %> </title>
-		<%= stylesheet_link_tag "index", "menu", "jquery.jcarousel.css", "skin", "lightbox" %>
-		<%= javascript_include_tag "jquery", "menu", "ifsafari","jquery.jcarousel.pack", "slider", "jquery.lightbox-0.5.js" %>
+		<%= stylesheet_link_merged :base %>
+		<%- javascripts("base") %>
+		
+		
+		<%= yield(:stylesheets)%>
 		
 		<!--[if IE]>
 			<%= stylesheet_link_tag "ie" %>
@@ -11,12 +14,6 @@
 		<!--[if IE 6]>
 			<%= stylesheet_link_tag "ie6" %>
 		<![endif]-->
-
-		<script type="text/javascript">
-	    $(function() {
-	        $('#fuck a').lightBox();
-	    });
-	    </script>
 
 
 	</head>
@@ -75,5 +72,14 @@
 				</div>
 			</div>
 		</div>
+	
+			<%= yield(:javascripts) %>
+			<%= yield(:javascripts_normal) %>
+			
+			<script type="text/javascript">
+		    $(function() {
+		        $('#fuck a').lightBox();
+		    });
+		    </script>
 	</body>
 </html>

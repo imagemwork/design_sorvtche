@@ -1,0 +1,23 @@
+* {margin: 0px; padding: 0px}
+body {font-family: Arial, Helvetica, Sans-serif; background: #999 url("/images/back.jpg") no-repeat top center}
+.align-arrow, .transparente, .test {behavior: url(/fixie6/iepngfix.htc) }
+.style-link-recipe {text-decoration: none; color: #333; font-weight: bold}
+.align-arrow {position: relative; top: 3px; margin-right: 2px;}
+.titles_index {font-size: 20px; color: #666}
+#pnlAll {width: 1000px; min-height: 100%; height: auto; margin: 0 auto}
+#pnlHeader {width: 700px; height: 150px; margin: 0 auto; color: white; position: relative; font-weight: bold; text-align: right; font-size: 10px}
+#links-topo {position: relative; top: 20px; right: 30px; color: #efefef; text-transform: uppercase; font-size: 9px; font-family: Verdana, Helvetica, Sans-serif; font-weight: normal}
+#links-topo a {color: #fff}
+.empresa-index {position: relative; top: 2px}
+#pnlMenu {width: 470px; height: auto; position: absolute; top: 80px; right: 0px}
+#pnlDobra {width: 700px; height: 35px; margin: 0 auto; background: transparent url("/images/back_menu.png") no-repeat bottom center}
+#pnlContent {width: 100%; min-height: auto; height: auto; background: white url("/images/teste.jpg") repeat-x top right}
+#pnlContentPrincipal {width: 710px; height: auto; min-height: 400px; padding-bottom: 50px; margin: 0 auto; background: transparent url("/images/back_content.png") no-repeat top center}
+#pnlSlides {width: 680px; height: 120px; margin: 0 auto}
+#pnlContentSilver {width: 660px; height: auto; padding: 10px; margin: 0 auto; display: table; text-align: left; -moz-border-radius: 15px; -webkit-border-redius: 15px; background: #EFEFEF; font-size: 13px}
+#flash_notice {width: 650px; padding: 5px; background: #BCDD5A ; border: 1px solid #80C31C; color: #333; font-weight: bold ;-moz-border-radius:0.5em; font-size: 12px; margin-bottom: 10px}
+#pnlFooter {width: 300px; height: auto; margin: 10 auto; text-align: center; font-size: 13px; color: #999}
+#pnlAllSobreReceitas {width: 310px; height: auto; float: left}
+#pnlReceitas {height: 135px; padding: 3px}
+#pnlSobre {height: auto; padding: 3px; border-bottom: 5px dotted #666}
+#pnlOrcamentos {width: 320px; height: 280px; float: right; padding: 3px 3px 3px 10px; border-left: 5px dotted #666}

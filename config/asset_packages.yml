@@ -1,0 +1,19 @@
+--- 
+javascripts: 
+- base: 
+  - jquery
+  - menu
+  - slider
+  - jquery.jcarousel.pack
+  - ifsafari
+stylesheets:
+- all:
+  - all
+- lightbox:
+  - lightbox
+- index:
+  - index
+- base:
+  - menu
+  - jquery.jcarousel
+  - skin   
