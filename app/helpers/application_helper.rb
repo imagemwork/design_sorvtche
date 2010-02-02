@@ -17,7 +17,7 @@ module ApplicationHelper
 	end
 	
 	def javascripts_normal(*files)
-	  content_for(:javascripts_normal) { javascript_include_tag(*files) }	 
+	  content_for(:javascripts_normal) { javascript_include_tag(*files )}	 
 	end
 	
 	def javascripts(*files)
