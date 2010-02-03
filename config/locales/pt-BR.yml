@@ -44,7 +44,7 @@ pt-BR:
         header:
           one: "{{model}} Não posso salvar: 1 erro"
           other: "{{model}} não pôde ser salvo: {{count}} erros."
-        body: "Por favor, verifique os seguintes campos em destaque:"
+        body: ""
       messages:
         inclusion: "não está incluso na lista"
         exclusion: "não está disponível"

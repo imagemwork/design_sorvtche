@@ -192,3 +192,8 @@
 	display: table;
 	margin: 0 auto;
 }
+
+
+.fieldWithErrors {
+	margin-bottom: -10px;
+}
