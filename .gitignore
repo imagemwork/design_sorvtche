@@ -7,3 +7,4 @@ public/system/**
 *.html.erb~
 *.yml~
 config/deploy.rb
+vendor/rails
