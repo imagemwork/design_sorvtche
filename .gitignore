@@ -6,5 +6,4 @@ public/system/**
 *.rb~
 *.html.erb~
 *.yml~
-config/deploy.rb
 vendor/rails
