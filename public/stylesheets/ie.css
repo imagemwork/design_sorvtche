@@ -23,7 +23,7 @@ ul#topnav li{ 	height:38px; }
 	color: #666;
 	font-family: Arial, Helvetica, Sans-serif;
 	padding: 3px 5px 3px 5px;
-	background: url("/images/name-products.jpg") no-repeat left center;
+	background: url("/images/name-products.png") no-repeat left center;
 }
 
 #show-categories {
@@ -40,5 +40,21 @@ ul#topnav li{ 	height:38px; }
 .box {
 	float: left;
 	width: 120px;
+	position: relative;
+	top: 7px;
+}
 
+#validacao-contact { float: right; width: 200px; }
+
+#validacao-contact .errorExplanation {
+	width: 250px;
+}
+
+#product-right { 
+	float: right;
+	width: 420px; 
+	min-height: 130px; 
+	height: auto; padding: 5px;
+	background: #f0f0f0 url("/images/top.jpg") no-repeat top center; 
+	font-size: 14px; 
 }
