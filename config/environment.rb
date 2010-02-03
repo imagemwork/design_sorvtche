@@ -8,5 +8,4 @@ Rails::Initializer.run do |config|
   config.i18n.default_locale = "pt-BR"
   config.gem "rack", :version => "1.0.1"
   
-  
 end
