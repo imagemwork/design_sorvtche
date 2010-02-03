@@ -1,4 +1,4 @@
 deploy.template = :locaweb
-deploy.application = ""
-deploy.user = ''
-deploy.hosts = ['']
+deploy.application = "sorvtche"
+deploy.user = 'sorvtche'
+deploy.hosts = ['sorvtche.com.br']
