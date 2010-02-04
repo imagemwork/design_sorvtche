@@ -110,6 +110,7 @@ body {
 		height: auto;
 		padding: 3px;
 		border-bottom: 5px dotted #666;
+				text-align: justify;
 	}	
 	#pnlOrcamentos {
 		width: 320px;
