@@ -36,9 +36,7 @@ pt-BR:
         name: "Nome"
       category:
         title: "Título"    
-        
-    
-        
+             
     errors:
       template:
         header:

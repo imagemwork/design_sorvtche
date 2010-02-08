@@ -1,6 +1,8 @@
 ActionController::Routing::Routes.draw do |map|
+  map.resources :vd_products
 
-  map.resources :events, :contacts, :categories, :home, :products, :recipes, :pictures, :textevents
+
+  map.resources :events, :contacts, :categories, :home, :products, :recipes, :pictures, :textevents, :vd_products
 
   map.resources :admin, :collection => {:list => :get, :list_categories => :get, :list_textevents => :get, :list_fotos => :get}
 

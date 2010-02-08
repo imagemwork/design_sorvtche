@@ -17,9 +17,16 @@
     <%= f.text_area :ingredients %>
   </p>
   <p>
-    <%= f.label("Escolha a categoria: ") %>
+    <%= f.label("Escolhsdfsda a categoria: ") %>
     <%= f.collection_select :category_id, Category.all, :id, :title %>
   </p>
+  <p>
+  	<%= f.label("VD")%>
+	<% @vds.each do |v|%>
+		<p><%= radio_button("product", "vd_id", v.id	) %>
+		<%= v.v_calorico %>, <%= v.carb%>, <%= v.proteinas%>, <%= v.gorduras_t%>, <%= v.gorduras_s%>, <%= v.gordruras_tra%>, <%= v.fibra%>, <%= v.sodio%></p>
+	<% end -%>
+  <p>
   <p>
     <%= f.submit 'Criar' %>
   </p>

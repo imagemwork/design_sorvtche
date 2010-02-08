@@ -56,6 +56,11 @@
 </h3>
 
 <h3 class="titles_index">
+	Tabela de Valores Diarios:(<%= image_tag("new.png", :class=> "align-arrow") %><%= link_to 'Crie uma', new_vd_product_path %>) - 
+	<%= link_to "Gerenciar", vd_products_path%>
+</h3>
+
+<h3 class="titles_index">
 	Categorias Produtos(<%= image_tag("new.png", :class=> "align-arrow") %><%= link_to 'Crie Uma', new_category_path %>) - 
 	<%= link_to "Ver todas", :controller => "admin", :action => "list_categories" %>
 </h3> 

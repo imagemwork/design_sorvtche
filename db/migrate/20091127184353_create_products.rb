@@ -5,6 +5,7 @@ class CreateProducts < ActiveRecord::Migration
       t.string :name
       t.integer :weight
       t.text :ingredients
+      t.integer :vd_id
       t.integer :categories_id
 
       t.timestamps

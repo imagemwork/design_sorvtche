@@ -29,6 +29,7 @@ class ProductsController < ApplicationController
   def new
   	
     @product = Product.new
+    @vds = VdProduct.all
 
     respond_to do |format|
       format.html # new.html.erb
@@ -39,6 +40,7 @@ class ProductsController < ApplicationController
   # GET /products/1/edit
   def edit
     @product = Product.find(params[:id])
+    @vds = VdProduct.all
   end
 
   # POST /products
