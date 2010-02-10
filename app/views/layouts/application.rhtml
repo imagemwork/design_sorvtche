@@ -4,6 +4,8 @@
 		<title> Sorvtche - <%= yield(:title) %> </title>
 		
 		<%= stylesheet_link_tag "index", "slider" %>
+		<%= stylesheet_link_merged :base %>
+
 		<%- javascripts("base") %>
 		<%= javascript_include_tag "jquery" %>
 		<%= javascript_include_tag("s3Slider.js") %>
@@ -70,11 +72,18 @@
 	    });
 	    </script>
 
-		
 			<div id="rodape">
-				<div id="top">
-					
-				</div>
+				<div id="top"></div>
+				
+						<div id="pnlSearch">
+							<% form_tag busca_products_path do %>
+							<p>
+								<%= text_field_tag :search, params[:search], :class => "teste-form" %>
+									<%= submit_tag "Buscar", :name => nil, :class => "button-search" %>
+							</p>
+							<% end %>	
+						</div>
+
 				<p>Sorvtchê 1984 - 2010 - Todos direitos reservados</p>
 			</div>
 		

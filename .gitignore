@@ -6,4 +6,3 @@ public/system/**
 *.rb~
 *.html.erb~
 *.yml~
-vendor/rails

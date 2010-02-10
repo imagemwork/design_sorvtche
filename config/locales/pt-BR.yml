@@ -10,6 +10,7 @@ pt-BR:
       event: "Evento"
       picture: "Foto de Evento"
       category: "Categoria"
+      vd_product: "Valores diarios"
     attributes:
       product:
         name: "Nome"
@@ -36,9 +37,7 @@ pt-BR:
         name: "Nome"
       category:
         title: "Título"    
-        
-    
-        
+             
     errors:
       template:
         header:

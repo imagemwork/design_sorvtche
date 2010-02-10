@@ -1,0 +1,41 @@
+<h3 class="titles_index">Nova Tabela de Valores Diários</h3>
+<% form_for(@vd_product) do |f| %>
+  <%= f.error_messages %>
+  <p>
+    <%= f.label :v_calorico %><br />
+    <%= f.text_field :v_calorico %>
+  </p>
+  <p>
+    <%= f.label :carb %><br />
+    <%= f.text_field :carb %>
+  </p>
+  <p>
+    <%= f.label :proteinas %><br />
+    <%= f.text_field :proteinas %>
+  </p>
+  <p>
+    <%= f.label :gorduras_t %><br />
+    <%= f.text_field :gorduras_t %>
+  </p>
+  <p>
+    <%= f.label :gorduras_s %><br />
+    <%= f.text_field :gorduras_s %>
+  </p>
+  <p>
+    <%= f.label :gordruras_tra %><br />
+    <%= f.text_field :gordruras_tra %>
+  </p>
+  <p>
+    <%= f.label :fibra %><br />
+    <%= f.text_field :fibra %>
+  </p>
+  <p>
+    <%= f.label :sodio %><br />
+    <%= f.text_field :sodio %>
+  </p>
+  <p>
+    <%= f.submit 'Criar' %>
+  </p>
+<% end %>
+
+<%= link_to 'Voltar', admin_index_path %>

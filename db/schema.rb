@@ -9,7 +9,7 @@
 #
 # It's strongly recommended to check this file into your version control system.
 
-ActiveRecord::Schema.define(:version => 20091223162008) do
+ActiveRecord::Schema.define(:version => 20100208161234) do
 
   create_table "categories", :force => true do |t|
     t.string   "title"
@@ -56,6 +56,7 @@ ActiveRecord::Schema.define(:version => 20091223162008) do
     t.string   "name"
     t.integer  "weight"
     t.text     "ingredients"
+    t.integer  "vd_id"
     t.integer  "category_id"
     t.datetime "created_at"
     t.datetime "updated_at"
@@ -63,6 +64,14 @@ ActiveRecord::Schema.define(:version => 20091223162008) do
     t.string   "produto_content_type"
     t.integer  "produto_file_size"
     t.datetime "produto_updated_at"
+    t.string   "v_calorico"
+    t.string   "carb"
+    t.string   "proteinas"
+    t.string   "gorduras_t"
+    t.string   "gorduras_s"
+    t.string   "gordruras_tra"
+    t.string   "fibra"
+    t.string   "sodio"
   end
 
   create_table "recipes", :force => true do |t|
@@ -85,6 +94,19 @@ ActiveRecord::Schema.define(:version => 20091223162008) do
     t.datetime "updated_at"
     t.string   "city"
     t.integer  "event_id"
+  end
+
+  create_table "vd_products", :force => true do |t|
+    t.string   "v_calorico"
+    t.string   "carb"
+    t.string   "proteinas"
+    t.string   "gorduras_t"
+    t.string   "gorduras_s"
+    t.string   "gordruras_tra"
+    t.string   "fibra"
+    t.string   "sodio"
+    t.datetime "created_at"
+    t.datetime "updated_at"
   end
 
 end

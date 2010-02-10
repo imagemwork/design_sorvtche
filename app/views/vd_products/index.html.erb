@@ -1,0 +1,32 @@
+<h3 class="titles_index">Lista de Valores Diarios do Produtos</h3>
+
+<table border="1">
+  <tr>
+    <th>V calorico</th>
+    <th>Carb</th>
+    <th>Proteinas</th>
+    <th>Gorduras t</th>
+    <th>Gorduras s</th>
+    <th>Gordruras tra</th>
+    <th>Fibra</th>
+    <th>Sodio</th>
+  </tr>
+
+<% @vd_products.each do |vd_product| %>
+  <tr>
+    <td><%=h vd_product.v_calorico %></td>
+    <td><%=h vd_product.carb %></td>
+    <td><%=h vd_product.proteinas %></td>
+    <td><%=h vd_product.gorduras_t %></td>
+    <td><%=h vd_product.gorduras_s %></td>
+    <td><%=h vd_product.gordruras_tra %></td>
+    <td><%=h vd_product.fibra %></td>
+    <td><%=h vd_product.sodio %></td>
+    <td><%= link_to 'Editar', edit_vd_product_path(vd_product) %></td>
+    <td><%= link_to 'Deletar', vd_product, :confirm => 'Are you sure?', :method => :delete %></td>
+  </tr>
+<% end %>
+</table>
+
+<br />
+<%= link_to 'Voltar', admin_index_path %>

@@ -1,0 +1,7 @@
+<%- stylesheets("index", "all") %>
+
+<% unless @products.blank?%>
+	<%= render :partial => "products" %>
+<% else %>
+	<p>Nenhum produto encontrado</p>
+<% end -%>

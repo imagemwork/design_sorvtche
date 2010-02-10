@@ -1,0 +1,23 @@
+# Read about fixtures at http://ar.rubyonrails.org/classes/Fixtures.html
+
+one:
+  product_id: 1
+  v_calorico: MyString
+  carb: MyString
+  proteinas: MyString
+  gorduras_t: MyString
+  gorduras_s: MyString
+  gordruras_tra: MyString
+  fibra: MyString
+  sodio: MyString
+
+two:
+  product_id: 1
+  v_calorico: MyString
+  carb: MyString
+  proteinas: MyString
+  gorduras_t: MyString
+  gorduras_s: MyString
+  gordruras_tra: MyString
+  fibra: MyString
+  sodio: MyString
