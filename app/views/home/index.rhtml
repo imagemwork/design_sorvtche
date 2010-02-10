@@ -1,39 +1,56 @@
 <%- title("Home") %>
 <%- selected(:home) %>
-<%- stylesheets("index") %>
+	
+		<div id="slider1">
+		        <ul id="slider1Content">
+		            <li class="slider1Image">
+		                <a href=""><img src="images/imgs_inicial/frocos.jpg" alt="1" /></a>
 
-<div id="pnlAllSobreReceitas">
-	<div id="pnlSobre">
-		<p>
-			<h3 class="titles_index">Sobre</h3>
+		                <span class="left"><strong>Flocos</strong><br />Potes 2 litros</span></li>
+		            <li class="slider1Image">
+		                <a href=""><img src="images/imgs_inicial/morango.jpg" alt="2" /></a>
+		                <span class="left"><strong>Morango com Abacaxi</strong><br />Potes 2 litros</span></li>
+		            <li class="slider1Image">
+		                <img src="images/imgs_inicial/chocolate.jpg" alt="3" />
+		                <span class="left"><strong>Title text 2</strong><br />Content text...</span></li>
+						<li class="slider1Image">
+			                <img src="images/imgs_inicial/3.jpg" alt="3" />
+			                <span class="right"><strong>Title text 2</strong><br />Content text...</span></li>
+
+		        </ul>
+		    </div>
+
+			<div id="sobre">
+				<h3 class="titulos">	» Sobre a Sorvtchê</h3>
 			Fundada em 1984, a Sorvtchê ocupa hoje, lugar de destaque no que se refere a produtos que unem o delicioso sabor agregado à qualidade.<br>A Sorvtchê oferece toda a linha de sorvetes, picolés e seus derivados. Sempre primando pela utilização de matérias primas selecionadas, a Sorvtchê possui hoje um dos mais deliciosos sorvetes do Brasil, conquistando a cada dia novos e fiéis consumidores.<br><br>
-		</p>
-	</div>
-	<div id="pnlReceitas">
-		<p>
-		
-			<h3 class="titles_index">Receitas</h3>
-			Confira aqui algumas receitas, e também envie às suas próprias receitas e compartilhes com os demais usuários do site.<br />
-			<b>Última Receita:</b><br />
-		
-			<% @recipes.each do |r| %>
 
-			  		<%= image_tag("arrow.png", :class => "align-arrow") %>
-			  		<%= link_to r.name, r, :class => "style-link-recipe" %>
-  		
-			  		<small>(<%= r.created_at.strftime("%d/%m/%y") %>)</small>
+			</div>
+			
+			<div id="receitas">
+				<h3 class="titulos">	» Receitas</h3>
+				Confira aqui algumas receitas, e também envie às suas próprias receitas e compartilhes com os demais usuários do site.<br />
+				<br/><b>Última Receita:</b><br />
+				<% @recipes.each do |r| %>
 
-			<% end %>
+				  		
+				  		<%= link_to r.name, r, :class => "style-link-recipe" %>
 
-		</p>
-	</div>
-</div>
+				  		<small>(<%= r.created_at.strftime("%d/%m/%y") %>)</small>
 
-<div id="pnlOrcamentos">
-	<p>
-		<h3 class="titles_index">Orçamentos</h3>
-		Faça aqui seu cadastro e tenha acesso ao sistema de orçamentos, e tenha a possibilidade de fazer seus próprios orçamentos que retornaremos o mais breve possível.<br> Clique no botão abaixo e realize seu cadastro.<br><Br>
-		
-		<%= image_tag("button.jpg") %>
-	</p>
-</div>
+				<% end %>
+				
+				<br /><br />
+				<%= image_tag("menina_small.png", :class=>"img_menina") %>
+				
+				
+			</div>
+
+			<div id="orcamentos">
+				<h3 class="titulos">	» Orçamentos</h3>
+				Faça aqui seu cadastro e tenha acesso ao sistema de orçamentos, e tenha a possibilidade de fazer seus próprios orçamentos que retornaremos o mais breve possível.<br> Clique no botão abaixo e realize seu cadastro.<br><Br>
+
+				<%= image_tag("button.jpg") %>
+
+			</div>
+
+		<div class="clear"></div>

@@ -9,7 +9,7 @@ module ApplicationHelper
   end
 
 	def selected(name)
-		content_for(name) { "selected" }	
+		content_for(name) { "tes" }	
 	end
 	
 	def stylesheets(*files)

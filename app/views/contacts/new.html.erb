@@ -1,54 +1,36 @@
 <%- title("Contato") %>
 <%- selected(:contato) %>
-<%- stylesheets("index", "all") %>
 
-<h3 class="titles_index">Contate-nos</h3>
-<br />
 
-<div id="new-contact">
+
+
 	<% form_for(@contact) do |f| %>
 	
-	<div id="validacao-contact">
-		
-		<div class="cor-validacao"><%= f.error_messages %></div>
-		
-		<div id="logo-contato">
-			<%= image_tag("logo-contato.jpg") %><br /><br />
-			<p>Sorvtchê 2010 - Rua Marechal Castelo Branco, 556 / Fone: (54) 3374-1286 / CEP: 99940-000 / CNPJ: 905335630001-38<br /> <b>Ibiaçá - RS</b></p>
-		</div>
-		
-	</div>
 	
-	<div id="formulario-contact">
-	  <p>
+		
+		<%= f.error_messages %>
+		
+
+		
+
 	    <%= f.label :nome %><br />
 	    <%= f.text_field :nome, :class => "input-text" %>
-	  </p><br />
-	  <p>
+
 	    <%= f.label :assunto %><br />
 	    <%= f.text_field :assunto, :class => "input-text" %>
-	  </p><br />
-	  <p>
+
 	    <%= f.label :email %><br />
 	    <%= f.text_field :email, :class => "input-text" %>
-	  </p><br />
-	  <p>
+
 	    <%= f.label :mensagem %><br />
 	    <%= f.text_area :mensagem, :class => "input-text", :rows => 10, :maxlenght => "130" ,:style => "overflow: auto;" %>
-	  </p>
-		<br />
-	  <p>
+
 	    <%= f.submit 'Enviar', :class => "button-login" %>
-	  </p>
+
 	
-	</div>
+	
 
 	
 	
 	<% end %>
 	
-</div>
-
-<br />
-<%= image_tag("arrow.png", :class=> "align-arrow") %>
-<%= link_to 'Voltar', home_index_path, :class => "style-link-recipe" %>

@@ -7,6 +7,6 @@ class Product < ActiveRecord::Base
 	
 	has_attached_file :produto,
                     :styles => { :medium => "300x300>",
-                                 :thumb => "150x150>" }
+                                 :thumb => "180x180>" }
 
 end

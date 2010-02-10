@@ -2,11 +2,14 @@
 	<head>
 		<meta http-equiv="Content-type" content="text/html; charset=utf-8" />
 		<title> Sorvtche - <%= yield(:title) %> </title>
-		<%= stylesheet_link_merged :base %>
-		<%- javascripts("base") %>
-		<%= javascript_include_tag("http://ajax.googleapis.com/ajax/libs/jquery/1.2.6/jquery.min.js") %>
 		
-		<%= yield(:stylesheets)%>
+		<%= stylesheet_link_tag "index", "slider" %>
+		<%- javascripts("base") %>
+		<%= javascript_include_tag "jquery" %>
+		<%= javascript_include_tag("s3Slider.js") %>
+		
+		
+		<%= yield(:stylesheets) %>
 		
 		<!--[if IE]>
 			<%= stylesheet_link_tag "ie" %>
@@ -15,70 +18,67 @@
 			<%= stylesheet_link_tag "ie6" %>
 		<![endif]-->
 
+
+		<script type="text/javascript">
+		    $(document).ready(function() {
+		        $('#slider1').s3Slider({
+		            timeOut: 4000 
+		        });
+		    });
+		</script>
+
+
 	</head>
 	<body>
-		<div id="pnlAll">
-			<div id="pnlHeader">
-				<div id="links-topo">
-					<p>
-						<%= image_tag("login-index.jpg", :class=>"empresa-index") %><%= link_to "Login", :controller => "home", :action => "empresa" %> 
-						<%= image_tag("empresa.jpg", :class=>"empresa-index", :border => 0) %><%= link_to "Empresa", :controller => "home", :action => "empresa" %> 
-					</p>
-				</div>
-				<div id="pnlMenu">
-					<ul id="topnav" class="V2">
-						<li class="<%= yield(:home) %>"><%= link_to image_tag("home.png", :border=>0, :class => "avril"), 
-																		:controller => "home", :action => "index"  %>
-						</li>
-						<li class="<%= yield(:produtos) %>"><%= link_to "Produtos", products_path %></li>
-						<li class="<%= yield(:recipes) %>"><%= link_to "Receitas", recipes_path %></li>
-						<li class="<%= yield(:eventos) %>"><%= link_to "Eventos", pictures_path %></li>
-						<li class="<%= yield(:contato) %>"><%= link_to "Contato", new_contact_path %></li>
-					</ul>	
+		<div id="all">
+			
+		
+		<div id="allSite">
+			
+			<div id="conteudo">
+				<div id="header">
 					
 				</div>
-			</div>
-			<div id="pnlDobra">
-				<p></p>
-			</div>
-			<div id="pnlContent">
-				<div id="pnlContentPrincipal">
-					<div id="pnlSlides">
-						<ul id="mycarousel" class="jcarousel-skin-tango">
-							<% produtos %>
-							
-							<% @products.each do |p| %>
-								<li>
-									<%= link_to image_tag(p.produto.url(:thumb), :width => 80, :height => 70, :border => 0,
-									 									:class=>"products-index"),
-																		{:controller => "products",
-																		:action => "show",
-																		:id => p.category_id} %>
-								</li>
-							<% end %>
-
-						</ul>
-					</div>
-					<div id="pnlContentSilver">
-						<% unless flash[:notice].blank? %>
-							<div id="flash_notice"><%= flash[:notice] %></div>
-						<% end %>
-						<%= yield %>
-					</div>
-					<div id="pnlFooter">
-						<p>Sorvtche 2010 - Todos Direitos Reservados</p>
-					</div>
+				<div id="menu">
+					<ul id="menu-links">
+						<li class='<%= yield(:home) %>'><%= link_to "Home", home_index_path %></li>
+						<li class='<%= yield(:empresa) %>'><%= link_to "Empresa", home_index_path %></li>
+						<li class='<%= yield(:recipes) %>'><%= link_to "receitas", recipes_path %></li>
+						<li class='<%= yield(:produtos) %>'><%= link_to "produtos", products_path %></li>
+						<li class='<%= yield(:franquias) %>'><%= link_to "Franquias", home_index_path %></li>
+						<li class='<%= yield(:contato) %>'><%= link_to "Contato", new_contact_path %></li>
+					</ul>
 				</div>
+				
+				<div id="conteudo-paginas">
+					<%= yield %>
+				</div>
+				
 			</div>
-		</div>
-	
-			<%= yield(:javascripts) %>
-			<%= yield(:javascripts_normal) %>
+			<div class="clear"></div>
 			
-			<script type="text/javascript">
-		    $(function() {
-		        $('#fuck a').lightBox();
-		    });
-		    </script>
+
+			
+		</div>
+		
+		<%= yield(:javascripts) %>
+		<%= yield(:javascripts_normal) %>
+
+		<script type="text/javascript">
+	    $(function() {
+	        $('#fuck a').lightBox();
+	    });
+	    </script>
+
+		
+			<div id="rodape">
+				<div id="top">
+					
+				</div>
+				<p>Sorvtchê 1984 - 2010 - Todos direitos reservados</p>
+			</div>
+		
+		</div>
+
 	</body>
 </html>
