@@ -53,17 +53,37 @@ html {
 #menu {
 	width: 100%;
 	height: 52px;
+	position: relative;
 	background: url('/images/new-menu.jpg') repeat-x left top;
 }
 
+#busca {
+	width: 330px;
+	padding: 5px;
+	position: absolute;
+	right: 0px;
+	top:5px;
+
+	float: right;
+}
+
+#busca input[type=text] {
+	padding: 5px;
+	width: 200px;
+	position: relative;
+	top: -11px;
+	font-size: 15px;
+}
+
 #menu-links {
-	width: 800px;
+	width: 650px;
 	padding: 19px;
 	font-size: 12px;
-	}
+	float: left;
+
+}
 #menu-links li {
 	display: inline;
-
 }
 #menu-links li a {
 	display: inline;
@@ -143,6 +163,8 @@ html {
 	color: #666;
 	padding: 10px;
 }
+
+
 
 .align-arrow {
 	position: relative;

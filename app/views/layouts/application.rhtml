@@ -4,7 +4,7 @@
 		<title> Sorvtche - <%= yield(:title) %> </title>
 		
 		<%= stylesheet_link_tag "index", "slider" %>
-		<%= stylesheet_link_merged :base %>
+
 
 		<%- javascripts("base") %>
 		<%= javascript_include_tag "jquery" %>
@@ -32,7 +32,7 @@
 
 	</head>
 	<body>
-		<div id="all">
+		<div id="all"> 
 			
 		
 		<div id="allSite">
@@ -49,19 +49,30 @@
 						<li class='<%= yield(:produtos) %>'><%= link_to "produtos", products_path %></li>
 						<li class='<%= yield(:franquias) %>'><%= link_to "Franquias", home_index_path %></li>
 						<li class='<%= yield(:contato) %>'><%= link_to "Contato", new_contact_path %></li>
-					</ul>
-				</div>
+
+					</ul><!-- - ul menu -->
+					
+						<div id="busca">
+							<% form_tag busca_products_path do %>
+								<p>
+									<%= text_field_tag :search, params[:search] %>
+									<%= image_submit_tag ("search.jpg"), :name => nil %>
+								</p>
+							<% end %>
+						</div>						
+	
+					
+				</div><!-- end menu -->
 				
 				<div id="conteudo-paginas">
 					<%= yield %>
-				</div>
+				</div><!-- end conteudo paginas -->
 				
-			</div>
+			</div><!-- end conteudo -->
 			<div class="clear"></div>
 			
 
-			
-		</div>
+		</div><!-- end allsite -->
 		
 		<%= yield(:javascripts) %>
 		<%= yield(:javascripts_normal) %>
@@ -74,20 +85,10 @@
 
 			<div id="rodape">
 				<div id="top"></div>
-				
-						<div id="pnlSearch">
-							<% form_tag busca_products_path do %>
-							<p>
-								<%= text_field_tag :search, params[:search], :class => "teste-form" %>
-									<%= submit_tag "Buscar", :name => nil, :class => "button-search" %>
-							</p>
-							<% end %>	
-						</div>
-
 				<p>Sorvtchê 1984 - 2010 - Todos direitos reservados</p>
-			</div>
+			</div><!-- end rodape -->
 		
-		</div>
+		</div><!-- end all -->
 
 	</body>
 </html>
