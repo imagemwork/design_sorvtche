@@ -59,6 +59,14 @@
 
 						</ul>
 					</div>
+						<div id="pnlSearch">
+							<% form_tag busca_products_path do %>
+							<p>
+								<%= text_field_tag :search, params[:search], :class => "teste-form" %>
+									<%= submit_tag "Buscar", :name => nil, :class => "button-search" %>
+							</p>
+							<% end %>	
+						</div>
 					<div id="pnlContentSilver">
 						<% unless flash[:notice].blank? %>
 							<div id="flash_notice"><%= flash[:notice] %></div>

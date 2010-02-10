@@ -9,5 +9,13 @@ class Product < ActiveRecord::Base
 	has_attached_file :produto,
                     :styles => { :medium => "300x300>",
                                  :thumb => "150x150>" }
+                                 
+  def self.search(search)
+     if search
+       find(:all, :conditions => ['name LIKE ?', "%#{search}%"])
+     else
+       find(:all)
+     end
+  end
 
 end

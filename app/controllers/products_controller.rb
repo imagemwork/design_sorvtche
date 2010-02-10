@@ -1,21 +1,22 @@
 class ProductsController < ApplicationController
-
+  
   before_filter :authenticate, :only => [:new, :edit, :destroy]
 	layout "admin", :only => ["new", "edit"]
-
-  def index
-  	
-  	@categories = Category.all
-  	@products = Product.all
-	
+  def index 
+    @categories = Category.all
+    @products = Product.all
     respond_to do |format|
       format.html { render :layout => "application" }
     end
-    
+  end
+  
+  def busca
+    @products = Product.search(params[:search])
+    respond_to do |format|
+      format.html { render :layout => "application" }
+    end
   end
 
-  # GET /products/1
-  # GET /products/1.xml
   def show
     @products = Product.all(:conditions => "category_id = '#{params[:id]}'")
 		@category = Category.find(params[:id])
@@ -24,28 +25,21 @@ class ProductsController < ApplicationController
     end
   end
 
-  # GET /products/new
-  # GET /products/new.xml
-  def new
-  	
+  def new	
     @product = Product.new
     @vds = VdProduct.all
-
     respond_to do |format|
       format.html # new.html.erb
     end
-    
   end
 
-  # GET /products/1/edit
   def edit
     @product = Product.find(params[:id])
     @vds = VdProduct.all
   end
 
-  # POST /products
-  # POST /products.xml
   def create
+     @vds = VdProduct.all
     @product = Product.new(params[:product])
 
     respond_to do |format|
@@ -58,8 +52,6 @@ class ProductsController < ApplicationController
     end
   end
 
-  # PUT /products/1
-  # PUT /products/1.xml
   def update
     @product = Product.find(params[:id])
 
@@ -73,8 +65,6 @@ class ProductsController < ApplicationController
     end
   end
 
-  # DELETE /products/1
-  # DELETE /products/1.xml
   def destroy
     @product = Product.find(params[:id])
     @product.destroy
