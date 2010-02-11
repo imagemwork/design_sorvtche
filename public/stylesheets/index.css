@@ -204,6 +204,14 @@ html {
 	font-weight: bold;
 	font-size: 12px;
 }
+.style-link-recipe2 {
+	text-decoration: none;
+	color: green;
+	font-weight: bold;
+	font-size: 12px;
+}
+
+
 #sobre {
 	width: 500px;
 	height: auto;
@@ -266,4 +274,28 @@ h3.titulos {
 	width: 100%;
 	height: 5px;
 	background: #1d5930;
+}
+
+/* RECEITAS */
+#descricao-receitas {
+	float: right;
+	width: 500px;
+	font-size: 13px;
+}
+
+.dez {
+	margin-left: 180px;
+}
+
+#receita {
+	width: 400px;
+	padding:10px;
+	background:#F7F7F7;
+	border-bottom: 1px solid #ccc;
+	margin: 7px;
+}
+#receita small {
+	color: #999;
+	font-size: 11px;
+	float:right;
 }

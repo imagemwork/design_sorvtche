@@ -47,8 +47,7 @@ class ContactsController < ApplicationController
     respond_to do |format|
       if @contact.save
         Mailer::deliver_mailer(params[:contact])
-        format.html { redirect_to(@contact) }
-        format.xml  { render :xml => @contact, :status => :created, :location => @contact }
+        format.html { render :action => "new" }
       else
         flash.now[:error_contact] = "Verifique os campos em destaque!"
         format.html { render :action => "new" }
