@@ -1,33 +1,35 @@
 <%- title("Contato") %>
 <%- selected(:contato) %>
+<h3 class="titulos">	» Contate Sorvtchê</h3>
 
 
-
-
+<div id="contato">
 	<% form_for(@contact) do |f| %>
 	
 	
 		
 		<%= f.error_messages %>
 		
-
-		
-
-	    <%= f.label :nome %><br />
+	<p>
+	    <%= f.label("Nome: <br/> <small>obrigatório</small>") %>
 	    <%= f.text_field :nome, :class => "input-text" %>
-
-	    <%= f.label :assunto %><br />
+	</p>
+	<p>
+	    <%= f.label("Assunto: <br/> <small>obrigatório</small>") %>
 	    <%= f.text_field :assunto, :class => "input-text" %>
-
-	    <%= f.label :email %><br />
+	</p>
+	<p>
+	    <%= f.label("E-mail: <br/> <small>obrigatório</small>") %>
 	    <%= f.text_field :email, :class => "input-text" %>
+	</p>
+	<p>
+	 	<%= f.label("Mensagem: <br/> <small>obrigatório</small>")%>
+		 <%= f.text_area :mensagem, :class => "textarea-contato", :rows => 10, :maxlenght => "130" ,:style => "overflow: auto;" %>
+	</p>
+	   <%= f.label("")%> 
+		<%= f.submit 'Enviar', :class => "button-login" %>
 
-	    <%= f.label :mensagem %><br />
-	    <%= f.text_area :mensagem, :class => "input-text", :rows => 10, :maxlenght => "130" ,:style => "overflow: auto;" %>
-
-	    <%= f.submit 'Enviar', :class => "button-login" %>
-
-	
+</div>
 	
 
 	
