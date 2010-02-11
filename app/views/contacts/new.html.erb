@@ -1,15 +1,27 @@
 <%- title("Contato") %>
 <%- selected(:contato) %>
-<h3 class="titulos">	» Contate Sorvtchê</h3>
-
-
+<h3 class="titulos">	» Contate a Sorvtchê</h3>
+<br />
+<div id="contato-left">
+	<div id="information-contact">
+		<br />
+		<%= image_tag("logo_contato.png") %><br /><br />
+		Rua Marechal Castelo Branco, 556<br />
+		Centro - Ibiaçá - RS<br />
+		CEP: 99.940-000<br />
+		Fone: (54) 3374.1268<br />
+		E-mail: sorvtche@hotmail.com
+	</div>
+</div>
 <div id="contato">
 	<% form_for(@contact) do |f| %>
-	
-	
-		
-		<%= f.error_messages %>
-		
+
+	<% if flash[:error_contact] %>
+	 	<div id="error_contact">
+			<%= flash[:error_contact] %>
+		</div>
+	<%end%>
+
 	<p>
 	    <%= f.label("Nome: <br/> <small>obrigatório</small>") %>
 	    <%= f.text_field :nome, :class => "input-text" %>
@@ -26,13 +38,17 @@
 	 	<%= f.label("Mensagem: <br/> <small>obrigatório</small>")%>
 		 <%= f.text_area :mensagem, :class => "textarea-contato", :rows => 10, :maxlenght => "130" ,:style => "overflow: auto;" %>
 	</p>
-	   <%= f.label("")%> 
+	<p>
+		<%= f.label("")%> 
 		<%= f.submit 'Enviar', :class => "button-login" %>
+	</p>
 
-</div>
-	
-
-	
 	
 	<% end %>
+
+</div>
+
+
+	
+	
 	

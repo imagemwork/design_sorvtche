@@ -71,7 +71,7 @@ html {
 	padding: 5px;
 	width: 200px;
 	position: relative;
-	top: -11px;
+	top: -12px;
 	font-size: 15px;
 }
 
@@ -83,6 +83,25 @@ html {
 	margin: 10px;
 }
 
+#contato {
+	width: 550px;
+}
+
+#information-contact {
+	width: 300px;
+	font-size: 13px;
+	color: #666;
+	text-align: center;
+	margin: 10px auto;
+}
+
+#contato-left {
+	float: right;
+	width: 400px;
+	height: 350px;
+	background: #FFF url('/images/bolinha_2.png') no-repeat bottom right;
+}
+
 #contato small {
 	color: #999;
 }
@@ -92,7 +111,7 @@ html {
 	font-size: 17px;
 	border: 2px solid #ccc;
 	padding: 3px;
-	background: url('/images/back-input.jpg') repeat-x;
+	background: #fff url('/images/back-input.jpg') repeat-x;
 }
 
 #contato .textarea-contato {
@@ -102,9 +121,22 @@ html {
 	width: 400px;
 	height: 120px;
 	border: 2px solid #ccc;
-	background: url('/images/back-input.jpg') repeat-x;
+	background: #FFF url('/images/back-input.jpg') repeat-x;
 }
 
+.fieldWithErrors {
+	margin: 3px;
+	background-color: #FFF3C3;
+}
+
+#error_contact {
+	padding: 8px;
+	background: #CC0000;
+	border: 1px solid red;
+	margin: 0px 5px 20px 5px;
+	font-size: 13px;
+	color: #fff;
+}
 
 #menu-links {
 	width: 650px;

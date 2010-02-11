@@ -50,8 +50,8 @@ class ContactsController < ApplicationController
         format.html { redirect_to(@contact) }
         format.xml  { render :xml => @contact, :status => :created, :location => @contact }
       else
+        flash.now[:error_contact] = "Verifique os campos em destaque!"
         format.html { render :action => "new" }
-        format.xml  { render :xml => @contact.errors, :status => :unprocessable_entity }
       end
     end
   end
