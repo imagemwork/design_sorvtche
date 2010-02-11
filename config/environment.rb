@@ -9,3 +9,13 @@ Rails::Initializer.run do |config|
   config.gem "rack", :version => "1.0.1"
   
 end
+
+ActionMailer::Base.default_content_type = "text/html"
+ActionMailer::Base.smtp_settings = {
+  :enable_starttls_auto => true,
+   :address => "smtp.gmail.com",
+   :port => 587,
+   :authentication => :plain,
+   :user_name => "edipofederle@gmail.com", #Você pode usar o Google Apps!
+   :password => 'edipo@federle'
+}
