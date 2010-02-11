@@ -46,6 +46,7 @@ class ContactsController < ApplicationController
 
     respond_to do |format|
       if @contact.save
+        Mailer::deliver_mailer(params[:contact])
         format.html { redirect_to(@contact) }
         format.xml  { render :xml => @contact, :status => :created, :location => @contact }
       else
