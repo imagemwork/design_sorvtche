@@ -71,7 +71,7 @@ html {
 	padding: 5px;
 	width: 200px;
 	position: relative;
-	top: -11px;
+	top: -12px;
 	font-size: 15px;
 }
 
@@ -83,6 +83,25 @@ html {
 	margin: 10px;
 }
 
+#contato {
+	width: 550px;
+}
+
+#information-contact {
+	width: 300px;
+	font-size: 13px;
+	color: #666;
+	text-align: center;
+	margin: 10px auto;
+}
+
+#contato-left {
+	float: right;
+	width: 400px;
+	height: 350px;
+	background: #FFF url('/images/bolinha_2.png') no-repeat bottom right;
+}
+
 #contato small {
 	color: #999;
 }
@@ -92,7 +111,7 @@ html {
 	font-size: 17px;
 	border: 2px solid #ccc;
 	padding: 3px;
-	background: url('/images/back-input.jpg') repeat-x;
+	background: #fff url('/images/back-input.jpg') repeat-x;
 }
 
 #contato .textarea-contato {
@@ -102,9 +121,22 @@ html {
 	width: 400px;
 	height: 120px;
 	border: 2px solid #ccc;
-	background: url('/images/back-input.jpg') repeat-x;
+	background: #FFF url('/images/back-input.jpg') repeat-x;
 }
 
+.fieldWithErrors {
+	margin: 3px;
+	background-color: #FFF3C3;
+}
+
+#error_contact {
+	padding: 8px;
+	background: #CC0000;
+	border: 1px solid red;
+	margin: 0px 5px 20px 5px;
+	font-size: 13px;
+	color: #fff;
+}
 
 #menu-links {
 	width: 650px;
@@ -172,6 +204,14 @@ html {
 	font-weight: bold;
 	font-size: 12px;
 }
+.style-link-recipe2 {
+	text-decoration: none;
+	color: green;
+	font-weight: bold;
+	font-size: 12px;
+}
+
+
 #sobre {
 	width: 500px;
 	height: auto;
@@ -234,4 +274,68 @@ h3.titulos {
 	width: 100%;
 	height: 5px;
 	background: #1d5930;
+}
+
+/* RECEITAS */
+#descricao-receitas {
+	float: right;
+	width: 500px;
+	font-size: 13px;
+}
+
+.dez {
+	margin-left: 180px;
+}
+
+#receita {
+	width: 400px;
+	padding:10px;
+	background:#F7F7F7;
+	border-bottom: 1px solid #ccc;
+	margin: 7px;
+}
+#receita small {
+	color: #999;
+	font-size: 11px;
+	float:right;
+}
+
+.tabela-receitas {
+	width: 100%;
+}
+
+#mostrar-receita {
+	width:500px;
+	height: 600px;
+	background: url('/images/folha.jpg') no-repeat left top;
+}
+#mostrar-receita h4 {
+	width: 300px;
+	position: relative;
+	top: 15px;
+	font-size:20px;
+	text-align:center;
+	color: #333;
+	margin: 0 auto;
+}
+
+#mostrar-receita .enviado {
+	width: 300px;
+	margin: 0 auto;
+	position: relative;
+	top: 15px;
+	text-align: center;
+	font-size: 13px;
+	color: #666;
+}
+
+#mostrar-receita .ingredientes {
+	width: 300px;
+	margin: 0 auto;
+	position: relative;
+	top: 33px;
+	text-align: left;
+	font-size: 13px;
+	color: #666;
+	line-height: 17px;
 }

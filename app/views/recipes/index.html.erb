@@ -1,31 +1,33 @@
 <%- title("Receitas") %>
 <%- selected(:recipes) %>
-<%- stylesheets("index", "all") %>
-<h3 class="titles_index">Receitas</h3>
 
+<h3 class="titulos">	» Receitas</h3>
 <br />
 
-<div id="pnlRecipeRight">
-	<p>
-		<%= image_tag("arrow.png", :class=> "align-arrow") %>
-		Confira aqui algumas receitas e aproveite para compartilhar a sua receita com os demais usuarios do site, basta apenas clicar em "Envie sua receita" assim voce contribui para tornar o site mais interativo! <br /> 
-			
-		<br />
-
+<div id="descricao-receitas">
+	<%= image_tag("menina_small.png", :class=>"img_menina", :align=>"left") %>
+	<p class="dez">
+		Confira aqui algumas receitas e aproveite para compartilhar a sua receita com os demais usuários do site, basta apenas clicar em "Envie sua receita" assim voce contribui para tornar o site mais interativo!
+		<br /><br />
 		<%= image_tag("new.png", :class=> "align-arrow") %> 
 		<%= link_to 'Envie sua receita', new_recipe_path, :class => "style-link-recipe" %>
-	</p>
+		
+	</p> <br /> 
+
+
+
 </div>
 
 	<% @recipes.each do |r| %>
 	
+	<div id="receita">
 		<%= image_tag("arrow_2.png", :class=> "align-arrow") %>
-		<%= link_to r.name, r, :class => "style-link-recipe" %>
-		<small>(<%= r.created_at.strftime("%d/%m/%y") %>)</small>
+		<%= link_to r.name, r, :class => "style-link-recipe2" %>
+		<small>criado em: <b><%= r.created_at.strftime("%d/%m/%y") %></b>, por: <b><%= r.person_name %></b></small>
 		<br />
+		
+		
+		
+	</div>
 	
 	<% end %>
-
-<br />
-<%= image_tag("arrow.png", :class=> "align-arrow") %>
-<%= link_to 'Voltar', home_index_path, :class => "style-link-recipe" %>
