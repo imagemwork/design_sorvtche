@@ -75,6 +75,37 @@ html {
 	font-size: 15px;
 }
 
+#contato label {
+	float: left;
+	width: 7em;
+	font-size: 12px;
+	color: #666;
+	margin: 10px;
+}
+
+#contato small {
+	color: #999;
+}
+#contato input[type=text] {
+	margin: 10px;
+	width: 400px;
+	font-size: 17px;
+	border: 2px solid #ccc;
+	padding: 3px;
+	background: url('/images/back-input.jpg') repeat-x;
+}
+
+#contato .textarea-contato {
+	margin: 10px;
+	padding: 3px;
+	font-size: 17px;
+	width: 400px;
+	height: 120px;
+	border: 2px solid #ccc;
+	background: url('/images/back-input.jpg') repeat-x;
+}
+
+
 #menu-links {
 	width: 650px;
 	padding: 19px;
