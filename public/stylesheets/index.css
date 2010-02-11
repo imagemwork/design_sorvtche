@@ -299,3 +299,43 @@ h3.titulos {
 	font-size: 11px;
 	float:right;
 }
+
+.tabela-receitas {
+	width: 100%;
+}
+
+#mostrar-receita {
+	width:500px;
+	height: 600px;
+	background: url('/images/folha.jpg') no-repeat left top;
+}
+#mostrar-receita h4 {
+	width: 300px;
+	position: relative;
+	top: 15px;
+	font-size:20px;
+	text-align:center;
+	color: #333;
+	margin: 0 auto;
+}
+
+#mostrar-receita .enviado {
+	width: 300px;
+	margin: 0 auto;
+	position: relative;
+	top: 15px;
+	text-align: center;
+	font-size: 13px;
+	color: #666;
+}
+
+#mostrar-receita .ingredientes {
+	width: 300px;
+	margin: 0 auto;
+	position: relative;
+	top: 33px;
+	text-align: left;
+	font-size: 13px;
+	color: #666;
+	line-height: 17px;
+}

@@ -1,9 +1,26 @@
 <%- title(@recipe.name) %>
-<%- stylesheets("index", "all") %>
 
-<h3 class="titles_index">Exibindo, <%= @recipe.name %></h3>
+
+<h3 class="titulos">» Exibindo, <%= @recipe.name %></h3>
 <br />
-<table border="0" class="table-show-recipe">
+
+
+<div id="mostrar-receita">
+	<h4><%=h @recipe.name %></h4>
+
+	<div class="enviado">
+		<%=h @recipe.person_name %>(<%= @recipe.email %>)
+	</div>
+	
+	<div class="ingredientes">
+		<%= @recipe.ingredients %>
+	</div>
+	
+</div>
+
+
+
+<table border="1" class="tabela-receitas">
 	<tr>
 		<th>Receita</th>
 		<td><%=h @recipe.name %></td>
@@ -26,5 +43,3 @@
 	</tr>
 </table>
 <br />
-<%= image_tag("arrow.png", :class=> "align-arrow") %>
-<%= link_to 'Voltar', recipes_path, :class => "style-link-recipe" %>
