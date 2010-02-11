@@ -19,3 +19,4 @@ ActionMailer::Base.smtp_settings = {
    :user_name => "edipofederle@gmail.com", #Você pode usar o Google Apps!
    :password => 'edipo@federle'
 }
+LiveValidations.use :jquery_validations
