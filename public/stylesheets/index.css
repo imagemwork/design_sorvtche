@@ -300,13 +300,11 @@ h3.titulos {
 	float:right;
 }
 
-.tabela-receitas {
-	width: 100%;
-}
-
 #mostrar-receita {
 	width:500px;
-	height: 600px;
+	min-height: 450px;
+	height: auto;
+	margin: 50px auto;
 	background: url('/images/folha.jpg') no-repeat left top;
 }
 #mostrar-receita h4 {
@@ -330,7 +328,7 @@ h3.titulos {
 }
 
 #mostrar-receita .ingredientes {
-	width: 300px;
+	width: 380px;
 	margin: 0 auto;
 	position: relative;
 	top: 33px;
@@ -338,4 +336,67 @@ h3.titulos {
 	font-size: 13px;
 	color: #666;
 	line-height: 17px;
+}
+
+#mostrar-receita .preparo {
+	width: 380px;
+	margin: 0 auto;
+	position: relative;
+	top: 33px;
+	text-align: left;
+	font-size: 13px;
+	color: #666;
+	line-height: 17px;
+}
+
+#mostrar-receita .dicas {
+	width: 380px;
+	margin: 0 auto;
+	position: relative;
+	top: 33px;
+	text-align: left;
+	font-size: 13px;
+	color: #666;
+	line-height: 17px;
+}
+
+
+/* CATEGORIAS */
+#painel-categorias {
+	width: 100%;
+	height: 400px;
+	display: table;
+}
+
+#categorias {
+	padding: 20px;
+	height: 190px;
+	position: relative;
+	-webkit-border-radius: 1em;
+	-moz-border-radius: 1em;
+	float: left;
+	border: 3px solid #ccc;
+	margin: 9px;
+}
+
+#nomes-categorias {
+	width: 200px;
+	background: #124430;
+	padding: 5px;
+	-webkit-border-radius: 1em;
+	-moz-border-radius: 1em;
+	position: absolute;
+	text-align: center;
+	bottom: 5px;
+	left: 5px;
+}
+#nomes-categorias a {
+	color: white;
+	font-size: 13px;
+	text-decoration: none;
+	font-weight: bold;
+}
+
+#descricao {
+	font-size: 13px;
 }

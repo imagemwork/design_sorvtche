@@ -1,27 +1,25 @@
 <%- title("Produtos") %>
 <%- selected(:produtos) %>
-<%- stylesheets("index", "all") %>
 
+<h3 class="titulos">	» Escolha a Categoria</h3>
 
-<h3 class="titles_index">Produtos Sorvtchê<br /> <small class="intro-categories"><i>Confira abaixo nossos produtos que estão divididos em categorias.</i></small></h3>
-<p></p>
-
-<br />
-
- <div id="pnlCategories">
-		<% @categories.each do |c| %>
-			<div id="show-categories">
-				<%= image_tag(c.photo.url(:thumb)) %><br />
-					<div class="box">
-						<div class="box-outer">
-								<p><%= link_to c.title, :controller => "products", :action => "show", :id => c.id %></p>
-						</div>
-					</div>
-			</div>
-		<% end %>
+<div id="descricao">
+	<p>Todos os produtos estão divididos em categorias listadas abaixo, basta escolher, ou você têm a opção de fazer uma busca por todos os produtos no campo localizado logo acima.</p>
 </div>
+
 <br />
 
+<div id="painel-categorias">
+	
 
-<%= image_tag("arrow.png", :class=> "align-arrow") %>
-<%= link_to 'Voltar', home_index_path, :class => "style-link-recipe" %>
+	<% @categories.each do |c| %>
+		<div id="categorias">
+			<%= image_tag(c.photo.url(:thumb)) %><br />
+			<div id="nomes-categorias">
+				<blockquote><%= link_to c.title, :controller => "products", :action => "show", :id => c.id %></blockquote>
+			</div>
+		</div>
+
+	<% end %>
+		
+</div>

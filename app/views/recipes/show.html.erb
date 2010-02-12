@@ -13,33 +13,25 @@
 	</div>
 	
 	<div class="ingredientes">
+		<b>Ingredientes:</b><br />
 		<%= @recipe.ingredients %>
 	</div>
 	
+	<div class="preparo">
+		<br />
+		<b>Preparo:</b><br />
+		<%= @recipe.preparation %>
+	</div>
+	
+	<% unless @recipe.tip.blank? %>
+	<div class="dicas">
+		<br />
+		<b>Dicas:</b><br />
+		<%= @recipe.tip %>
+	</div>
+	<% end %>
+	
+
+	
 </div>
 
-
-
-<table border="1" class="tabela-receitas">
-	<tr>
-		<th>Receita</th>
-		<td><%=h @recipe.name %></td>
-	</tr>
-	<tr>
-		<th>Enviado por</th>
-		<td><b><%=h @recipe.person_name %></b>(<%= @recipe.email %>)</td>
-	</tr>
-	<tr>
-		<th>Ingredientes</th>
-		<td><%=h @recipe.ingredients %></td>
-	</tr>
-	<tr>
-		<th>Preparo</th>
-		<td><%=h @recipe.preparation %></td>
-	</tr>
-	<tr>
-		<th>Dicas</th>
-		<td><%=h @recipe.tip %></td>
-	</tr>
-</table>
-<br />
