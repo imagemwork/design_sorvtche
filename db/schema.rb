@@ -56,7 +56,6 @@ ActiveRecord::Schema.define(:version => 20100208161234) do
     t.string   "name"
     t.integer  "weight"
     t.text     "ingredients"
-    t.integer  "vd_id"
     t.integer  "category_id"
     t.datetime "created_at"
     t.datetime "updated_at"
