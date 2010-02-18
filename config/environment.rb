@@ -7,6 +7,7 @@ Rails::Initializer.run do |config|
   config.time_zone = 'UTC'
   config.i18n.default_locale = "pt-BR"
   config.gem "rack", :version => "1.0.1"
+  config.load_paths += %W( #{RAILS_ROOT}/app/sweepers )
   
 end
 

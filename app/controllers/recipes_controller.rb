@@ -3,6 +3,9 @@ class RecipesController < ApplicationController
   layout "application"
   before_filter :authenticate, :only => [:edit, :destroy]
   
+  caches_page :index, :show
+	cache_sweeper :recipe_sweeper, :only => [:create, :update, :destroy]
+  
   def index
     @recipes = Recipe.find(:all, :conditions => "passed = 't'", :order => "id desc")
   end
