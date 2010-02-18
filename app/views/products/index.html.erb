@@ -9,14 +9,21 @@
 
 <br />
 
+<div id="categorias-left">
+	<ul class="categorias-ul">
+		<% @categories.each do |c| %>
+			<li><%= link_to c.title, :controller => "products", :action => "show", :id => c.id %></li>
+		<% end %>
+	</ul>
+</div>
+
 <div id="painel-categorias">
 	
-
 	<% @categories.each do |c| %>
 		<div id="categorias">
-			<%= image_tag(c.photo.url(:thumb)) %><br />
+			<%= link_to image_tag(c.photo.url(:thumb), :border=>0), :controller => "products", :action => "show", :id => c.id %><br />
 			<div id="nomes-categorias">
-				<blockquote><%= link_to c.title, :controller => "products", :action => "show", :id => c.id %></blockquote>
+				<%= link_to c.title, :controller => "products", :action => "show", :id => c.id %>
 			</div>
 		</div>
 

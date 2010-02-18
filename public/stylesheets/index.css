@@ -363,9 +363,18 @@ h3.titulos {
 
 /* CATEGORIAS */
 #painel-categorias {
-	width: 100%;
+	width: 750px;
 	height: 400px;
 	display: table;
+}
+
+#categorias-left {
+	width: 200px;
+	height: auto;
+	padding: 10px;
+	background: #ebebeb;
+	float: right;
+	margin-top: 10px;
 }
 
 #categorias {
@@ -377,6 +386,7 @@ h3.titulos {
 	float: left;
 	border: 3px solid #ccc;
 	margin: 9px;
+	background: #fff url('/images/back-name-products.jpg') repeat-x left bottom;
 }
 
 #nomes-categorias {
@@ -399,4 +409,88 @@ h3.titulos {
 
 #descricao {
 	font-size: 13px;
+}
+
+ul.categorias-ul {
+	
+}
+
+ul.categorias-ul li {
+	font-size: 13px;
+	padding: 10px;
+	border-bottom: 1px solid #ccc;
+}
+ul.categorias-ul li a {
+	text-decoration: none;
+	color: #333;
+}
+ul.categorias-ul li:hover {
+	background: #ccc;
+}
+ul.categorias-ul li a:hover {
+	text-decoration: underline;
+}
+/* PRODUTOS */
+#todos-produtos {
+	width: 100%;
+	background: #FFF;
+	display: table;
+}
+
+#produto {
+	width: 450px;
+	float: left;
+	padding: 5px;
+
+	background: #fff url("/images/back-produtos.jpg") repeat-x bottom right;
+	font-size: 12px;
+	margin: 9px;
+	border: 3px solid #ccc;
+	-webkit-border-radius: 1em;
+	-moz-border-radius: 1em;
+}
+.code-name {
+	color: blue;
+	font-size:14px;
+	margin: 10px;
+	font-weight: bold;
+	color:  #333;
+}
+.ingredientes {
+	text-align: justify;
+}
+.peso {
+	text-align: justify;
+}
+#tabela {
+	width: 230px;
+	height: 190px;
+	float: right;
+
+}
+#foto-produto {
+	width: 190px;
+	text-align:center;
+}
+table.nutricional {
+	font-size:11px;
+	width: 210px;
+}
+table.nutricional th {
+	padding: 5px;
+	color: #FFCD49;
+	background: red;
+
+}
+table.nutricional th small {
+	color: #FFF;
+}
+table.nutricional td {
+	padding: 2px;
+}
+tr.even {
+	background: #FFCD49;
+}
+table.nutricional span {
+	float: right;
 }

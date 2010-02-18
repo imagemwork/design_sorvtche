@@ -21,6 +21,7 @@
     <%= f.label :ingredientes %><br />
     <%= f.text_area :ingredients, :cols => "80" %>
   </p>
+	<hr>
   <p>
 	<%= f.label("Foto do produto") %><br />
   	<%= f.file_field :produto %>
@@ -30,10 +31,65 @@
     <%= f.collection_select :category_id, Category.all, :id, :title %>
   </p>
 
+	<br />
+	<hr>
+
+	<h3 class="titles_index">Informações Nutricional</h3>
+
+  <p>
+		<%= f.label("Valor Calorico") %><br />
+  	<%= f.text_field :v_calorico %>
+  </p>
+
+  <p>
+		<%= f.label("Carboidratos") %><br />
+  	<%= f.text_field :carb %>
+  </p>
+
+  <p>
+		<%= f.label("Proteinas") %><br />
+  	<%= f.text_field :proteinas %>
+  </p>
+
+  <p>
+		<%= f.label("Gorduras Totais") %><br />
+  	<%= f.text_field :gorduras_t %>
+  </p>
+
+  <p>
+		<%= f.label("Gorduras Saturadas") %><br />
+  	<%= f.text_field :gorduras_s %>
+  </p>
+
+  <p>
+		<%= f.label("Gorduras Trans") %><br />
+  	<%= f.text_field :gordruras_tra %>
+  </p>
+
+  <p>
+		<%= f.label("Fibra") %><br />
+  	<%= f.text_field :fibra %>
+  </p>
+
+  <p>
+		<%= f.label("Sodio") %><br />
+  	<%= f.text_field :sodio %>
+  </p>
+
+  <p>
+		<%= f.label("Gorduras Trans") %><br />
+  	<%= f.text_field :gorduras_t %>
+  </p>
+
+
+	<hr>
+	<br />
+
+
   <p>
   	<%= f.label("VD")%>
 	<% @vds.each do |v|%>
-		<p><%= radio_button("product", "vd_id", v.id	) %>
+		<p><%= radio_button("product", "vd_id", v.id) %>
 		<%= v.v_calorico %>, <%= v.carb%>, <%= v.proteinas%>, <%= v.gorduras_t%>, <%= v.gorduras_s%>, <%= v.gordruras_tra%>, <%= v.fibra%>, <%= v.sodio%></p>
 	<% end -%>
   <p>
