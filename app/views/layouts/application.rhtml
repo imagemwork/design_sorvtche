@@ -7,7 +7,6 @@
 
 		<%= javascript_include_tag "jquery", "s3Slider.js" %>
 		
-		
 		<%= yield(:stylesheets) %>
 		
 		<!--[if IE]>
@@ -41,10 +40,10 @@
 				<div id="menu">
 					<ul id="menu-links">
 						<li class='<%= yield(:home) %>'><%= link_to "Home", home_index_path %></li>
-						<li class='<%= yield(:empresa) %>'><%= link_to "Empresa", home_index_path %></li>
+						<li class='<%= yield(:empresa) %>'><%= link_to "Empresa", :controller => "home", :action => "empresa" %></li>
 						<li class='<%= yield(:recipes) %>'><%= link_to "receitas", recipes_path %></li>
 						<li class='<%= yield(:produtos) %>'><%= link_to "produtos", products_path %></li>
-						<li class='<%= yield(:franquias) %>'><%= link_to "Franquias", home_index_path %></li>
+						<li class='<%= yield(:franquias) %>'><%= link_to "Franquias", :controller => "home", :action => "empresa" %></li>
 						<li class='<%= yield(:contato) %>'><%= link_to "Contato", new_contact_path %></li>
 
 					</ul><!-- - ul menu -->

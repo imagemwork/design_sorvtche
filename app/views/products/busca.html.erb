@@ -1,7 +1,8 @@
-<%- stylesheets("index", "all") %>
-
 <% unless @products.blank?%>
 	<%= render :partial => "products" %>
 <% else %>
-	<p>Nenhum produto encontrado</p>
+	<div id="busca-error">
+		<p><%= image_tag("atention.png") %><br/>Sua busca não retornou nenhum resultado para o termo <b><i><%= params[:search] %></i></b></p><br />
+		<p>para ir à pagina de produtos, <%= link_to "clique aqui", products_path %></p>
+	</div>
 <% end -%>

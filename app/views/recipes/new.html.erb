@@ -1,48 +1,49 @@
 <%- title("Envie sua receita")%>
 <%- selected(:recipes) %>
-<%- stylesheets("index", "all") %>
 
-<h3 class="titles_index">Envie sua receita</h3>
+<h3 class="titulos">	» Envie sua receita</h3>
 <br />
-<div id="new-recipe">
+
+<div id="form-receitas">
 	<% form_for(@recipe) do |f| %>
-		<%= f.error_messages %>
+
+	<% if flash[:error_contact] %>
+	 	<div id="error_contact">
+			<%= flash[:error_contact] %>
+		</div>
+	<% end %>
 
 		<p>
-		  <%= f.label "Seu nome" %><br />
+		  <%= f.label("Seu nome: <br/> <small>obrigatório</small>") %>
 		  <%= f.text_field :person_name, :class => "input-text" %>
-		</p><br />
+		</p>
 		<p>
-		  <%= f.label "Seu e-mail" %><br />
+		   <%= f.label("Seu e-mail: <br/> <small>obrigatório</small>") %>
 		  <%= f.text_field :email, :class => "input-text" %>
-		</p><br />
+		</p>
 		<p>
-		  <%= f.label "Nome da Receita" %><br />
+		   <%= f.label("Receita: <br/> <small>obrigatório</small>") %>
 		  <%= f.text_field :name, :class => "input-text" %>
-		</p><br />
+		</p>
 		<p>
-		  <%= f.label :ingredientes %><br />
-		  <%= f.text_area :ingredients, :rows => 5, :style => "overflow: auto;" %><br/>
-	 	<small><i>Separe os ingredientes usando vírgulas(,)</i></small>
-		</p><br />
+		   <%= f.label("Ingredientes: <br/> <small>obrigatório</small>") %>
+		  <%= f.text_area :ingredients, :rows => 5, :style => "overflow: auto;", :class => "textarea-contato"%>
+		</p>
 		<p>
-		  <%= f.label :preparo %><br />
-		  <%= f.text_area :preparation, :rows => 5, :style => "overflow: auto;" %>
-		</p><br />
+		   <%= f.label("Preparo: <br/> <small>obrigatório</small>") %>
+		  <%= f.text_area :preparation, :rows => 5, :style => "overflow: auto;", :class => "textarea-contato" %>
+		</p>
 		<p>
-		  <%= f.label :dica %><br />
-		  <%= f.text_area :tip, :rows => 5, :style => "overflow: auto;" %>
+		   <%= f.label("Dicas: <br/> <small>opcional</small>") %>
+		  <%= f.text_area :tip, :rows => 5, :style => "overflow: auto;", :class => "textarea-contato" %>
 		</p>
 		<p>
 			<%= hidden_field_tag "recipe[passed]", "false" %>
 		</p>
 		<p>
-		  <br />
+
 		  <%= f.submit 'Enviar', :class => "button-login" %>
 		</p>
 	<% end %>
 </div>
 
-<br />
-<%= image_tag("arrow.png", :class=> "align-arrow") %>
-<%= link_to 'Voltar', recipes_path, :class => "style-link-recipe" %>
