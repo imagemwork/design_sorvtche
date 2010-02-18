@@ -41,8 +41,8 @@ class RecipesController < ApplicationController
         format.html { redirect_to(:action => "index") }
         format.xml  { render :xml => @recipe, :status => :created, :location => @recipe }
       else
+        flash.now[:error_contact] = "Verifique os campos em destaque!"
         format.html { render :action => "new" }
-        format.xml  { render :xml => @recipe.errors, :status => :unprocessable_entity }
       end
     end
   end
