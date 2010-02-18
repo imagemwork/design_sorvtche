@@ -5,10 +5,7 @@
 		
 		<%= stylesheet_link_tag "index", "slider" %>
 
-
-		<%- javascripts("base") %>
-		<%= javascript_include_tag :defaults, "jquery" %>
-		<%= javascript_include_tag("s3Slider.js") %>
+		<%= javascript_include_tag "jquery", "s3Slider.js" %>
 		
 		
 		<%= yield(:stylesheets) %>

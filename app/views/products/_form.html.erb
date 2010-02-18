@@ -20,6 +20,60 @@
     <%= f.label("Escolhsdfsda a categoria: ") %>
     <%= f.collection_select :category_id, Category.all, :id, :title %>
   </p>
+
+	<br />
+	<hr>
+
+	<h3 class="titles_index">Informações Nutricional</h3>
+
+  <p>
+		<%= f.label("Valor Calorico") %><br />
+  	<%= f.text_field :v_calorico %>
+  </p>
+
+  <p>
+		<%= f.label("Carboidratos") %><br />
+  	<%= f.text_field :carb %>
+  </p>
+
+  <p>
+		<%= f.label("Proteinas") %><br />
+  	<%= f.text_field :proteinas %>
+  </p>
+
+  <p>
+		<%= f.label("Gorduras Totais") %><br />
+  	<%= f.text_field :gorduras_t %>
+  </p>
+
+  <p>
+		<%= f.label("Gorduras Saturadas") %><br />
+  	<%= f.text_field :gorduras_s %>
+  </p>
+
+  <p>
+		<%= f.label("Gorduras Trans") %><br />
+  	<%= f.text_field :gordruras_tra %>
+  </p>
+
+  <p>
+		<%= f.label("Fibra") %><br />
+  	<%= f.text_field :fibra %>
+  </p>
+
+  <p>
+		<%= f.label("Sodio") %><br />
+  	<%= f.text_field :sodio %>
+  </p>
+
+
+
+	<hr>
+	<br />
+
+
+
+
   <p>
   	<%= f.label("VD")%>
 	<% @vds.each do |v|%>

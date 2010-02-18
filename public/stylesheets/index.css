@@ -430,3 +430,67 @@ ul.categorias-ul li:hover {
 ul.categorias-ul li a:hover {
 	text-decoration: underline;
 }
+/* PRODUTOS */
+#todos-produtos {
+	width: 100%;
+	background: #FFF;
+	display: table;
+}
+
+#produto {
+	width: 450px;
+	float: left;
+	padding: 5px;
+
+	background: #fff url("/images/back-produtos.jpg") repeat-x bottom right;
+	font-size: 12px;
+	margin: 9px;
+	border: 3px solid #ccc;
+	-webkit-border-radius: 1em;
+	-moz-border-radius: 1em;
+}
+.code-name {
+	color: blue;
+	font-size:14px;
+	margin: 10px;
+	font-weight: bold;
+	color:  #333;
+}
+.ingredientes {
+	text-align: justify;
+}
+.peso {
+	text-align: justify;
+}
+#tabela {
+	width: 230px;
+	height: 190px;
+	float: right;
+
+}
+#foto-produto {
+	width: 190px;
+	text-align:center;
+}
+table.nutricional {
+	font-size:11px;
+	width: 210px;
+}
+table.nutricional th {
+	padding: 5px;
+	color: #FFCD49;
+	background: red;
+
+}
+table.nutricional th small {
+	color: #FFF;
+}
+table.nutricional td {
+	padding: 2px;
+}
+tr.even {
+	background: #FFCD49;
+}
+table.nutricional span {
+	float: right;
+}

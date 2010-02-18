@@ -1,48 +1,60 @@
-
 <% unless @category.blank?%>
-	<h3 class="titles_index">Você está em: <%= @category.title %></h3>
+	<h3 class="titulos">	» Você está na categoria: <%= @category.title %></h3>
 <% end -%>
-<br /><br />
-	<% @products.each  do |p| %>
-			
-	<div id="all-products">
-		
-		<div id="product-left">
-			<span class="name-products">
-				<%=h p.name %>
-			</span>
-			<p>
-				<%= image_tag p.produto.url(:thumb) %>
-			</p>
-		</div>
-		<div id="product-right">
-			<p>
-				<%= image_tag("arrow_2.png", :class => "align-arrow") %>
-				<b>Code: </b>
-				<%=h p.code %>
-			</p>
-
-			<p>
-				<%= image_tag("arrow_2.png", :class => "align-arrow") %>
-				<b>Peso: </b>
-				<%=h p.weight %>
-			</p>
-
-			<p>
-				<%= image_tag("arrow_2.png", :class => "align-arrow") %>
-				<b>Ingredientes: </b>
-				<div class="margem"><%= p.ingredients %></div>
-			</p>
-
-		</div>
-
-	</div>
-
-		<br />
-
-	<% end %>
-
-
 <br />
-<%= image_tag("arrow.png", :class=> "align-arrow") %>
-<%= link_to 'Voltar', products_path, :class => "style-link-recipe" %>
+
+<div id="todos-produtos">
+	<% @products.each  do |p| %>
+		<div id="produto">
+
+			<div id="tabela">
+				<table border="0" class="nutricional">
+					<tr>
+						<th>Informação Nutricional<br><small>Porção de 100g(10 colheres de sopa)</small></th>
+						<th>%VD</th>
+					<tr class="odd">
+						<td>Valor Calórico <span><%= p.v_calorico %></span></td>
+						<td align="center"></td>
+					</tr>
+					<tr class="even">
+						<td>Carboidratos <span><%= p.carb %></span></td>
+						<td align="center">4 %</td>
+					</tr>
+					<tr class="odd">
+						<td>Proteínas <span><%= p.proteinas %></span></td>
+						<td align="center">1 %</td>
+					</tr>
+					<tr class="even">
+						<td>Gorduras Totais <span><%= p.gorduras_t %></span></td>
+						<td align="center">5 %</td>
+					</tr>
+					<tr class="odd">
+						<td>Gord. Saturadas <span><%= p.gorduras_s %></span></td>
+						<td align="center">4 %</td>
+					</tr>
+					<tr class="even">
+						<td>Gord. Trans <span><%= p.gordruras_tra %></span></td>
+						<td align="center">**</td>
+					</tr>
+					<tr class="odd">
+						<td>Fibra Alimentar <span><%= p.fibra %></span></td>
+						<td align="center">2 %</td>
+					</tr>
+					<tr class="even">
+						<td>Sódio <span><%= p.sodio %></span></td>
+						<td align="center">1 %</td>
+					</tr>
+				</table>
+			</div>
+			
+			
+			<div id="foto-produto">
+				<%= image_tag p.produto.url(:thumb) %>
+				<div class="code-name"><%=h p.code %> - <%=h p.name %></div>
+			</div>
+			
+			<div class="ingredientes"><b>Ingredientes:</b><%= p.ingredients %></div><br />
+			<div class="peso"><b>Peso:</b><br /><%=h p.weight %>Kg</div>
+		</div>
+	<% end %>
+</div>
