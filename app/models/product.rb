@@ -1,7 +1,7 @@
 class Product < ActiveRecord::Base
 
 	belongs_to :category
-	belongs_to :vd_product
+	belongs_to :vd_product, :foreign_key => :vd_id
 	
 	validates_presence_of :code, :name, :weight, :ingredients
 	validates_uniqueness_of :code
