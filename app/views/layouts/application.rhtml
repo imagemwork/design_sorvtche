@@ -5,7 +5,6 @@
 		
 		<%= stylesheet_link_tag "index", "slider" %>
 
-
 		<%= javascript_include_tag "jquery", "s3Slider.js" %>
 		
 		<%= yield(:stylesheets) %>
@@ -13,10 +12,6 @@
 		<!--[if IE]>
 			<%= stylesheet_link_tag "ie" %>
 		<![endif]-->
-		<!--[if IE 6]>
-			<%= stylesheet_link_tag "ie6" %>
-		<![endif]-->
-
 
 		<script type="text/javascript">
 		    $(document).ready(function() {
@@ -44,6 +39,7 @@
 						<li class='<%= yield(:empresa) %>'><%= link_to "Empresa", :controller => "home", :action => "empresa" %></li>
 						<li class='<%= yield(:recipes) %>'><%= link_to "receitas", recipes_path %></li>
 						<li class='<%= yield(:produtos) %>'><%= link_to "produtos", products_path %></li>
+						<li class='<%= yield(:eventos) %>'><%= link_to "eventos", pictures_path %></li>
 						<li class='<%= yield(:franquias) %>'><%= link_to "Franquias", :controller => "home", :action => "empresa" %></li>
 						<li class='<%= yield(:contato) %>'><%= link_to "Contato", new_contact_path %></li>
 

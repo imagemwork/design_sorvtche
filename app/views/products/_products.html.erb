@@ -14,7 +14,7 @@
 						<th>%VD</th>
 					<tr class="odd">
 						<td>Valor Calórico <span><%= p.v_calorico %></span></td>
-						<td align="center"></td>
+						<td align="center"><%= p.vd_product.v_calorico %></td>
 					</tr>
 					<tr class="even">
 						<td>Carboidratos <span><%= p.carb %></span></td>
@@ -54,7 +54,7 @@
 			</div>
 			
 			<div class="ingredientes"><b>Ingredientes:</b><%= p.ingredients %></div><br />
-			<div class="peso"><b>Peso:</b><br /><%=h p.weight %>Kg</div>
+			<div class="peso"><b>Peso:</b> <%=h p.weight %>Kg</div>
 		</div>
 	<% end %>
 </div>

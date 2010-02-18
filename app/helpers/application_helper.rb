@@ -4,6 +4,10 @@ module ApplicationHelper
 		content_for(:title) { page_title }
 	end
 
+  def voltar
+    return link_to_function "Voltar", 'history.back()'
+  end
+
   def produtos
     @products = Product.all
   end

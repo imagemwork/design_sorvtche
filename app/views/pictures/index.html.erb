@@ -1,19 +1,20 @@
 <%- title("Eventos") %>
 <%- selected(:eventos) %>
-<%- stylesheets("index", "all") %>
 
-<h3 class="titles_index">Eventos</h3>
+<h3 class="titulos">	» Eventos</h3>
 <br />
+
 
 <div id="pnlEvents">
 	<% @events.each do |e| %>
 		<div id="show-event">
-			<%= image_tag(e.event.url(:thumb)) %><br />
+			<%= link_to image_tag(e.event.url(:thumb), :border => 0), :controller => "pictures", :action => "show", :id => e.id  %><br />
 			<%= link_to e.title, :controller => "pictures", :action => "show", :id => e.id %>
 		</div>
 	<% end %>
 </div>
+<div class="clear"></div>
 
-<br />
-<%= image_tag("arrow.png", :class=> "align-arrow") %>
-<%= link_to 'Voltar', home_index_path, :class => "style-link-recipe" %>
+<div id="links">
+	<%= voltar %>
+</div>
