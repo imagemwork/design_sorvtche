@@ -2,6 +2,9 @@ class ProductsController < ApplicationController
   
   before_filter :authenticate, :only => [:new, :edit, :destroy]
 	layout "admin", :only => ["new", "edit"]
+	caches_page :index, :show
+	cache_sweeper :product_sweeper, :only => [:create, :update, :destroy]
+	
   def index 
     @categories = Category.all
     @products = Product.all
