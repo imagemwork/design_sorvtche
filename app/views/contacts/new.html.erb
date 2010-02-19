@@ -5,7 +5,7 @@
 <div id="contato-left">
 	<div id="information-contact">
 		<br />
-		<%= image_tag("logo_contato.png") %><br /><br />
+		<%= image_tag("logo_contato.png", :class => "ie") %><br /><br />
 		Rua Marechal Castelo Branco, 556<br />
 		Centro - Ibiaçá - RS<br />
 		CEP: 99.940-000<br />
@@ -38,17 +38,19 @@
 	 	<%= f.label("Mensagem: <br/> <small>obrigatório</small>")%>
 		 <%= f.text_area :mensagem, :class => "textarea-contato", :rows => 10, :maxlenght => "130" ,:style => "overflow: auto;" %>
 	</p>
-	<p>
-		<%= f.label("")%> 
-		<%= f.submit 'Enviar', :class => "button-login" %>
-	</p>
+	<br />
+
+		<%= f.submit 'Enviar', :class => "button-login-c" %>
+
 
 	
 	<% end %>
 
 </div>
 
-
+<div id="links">
+	<%= voltar %>
+</div>
 	
 	
 	

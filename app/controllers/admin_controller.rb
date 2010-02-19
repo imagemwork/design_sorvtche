@@ -29,7 +29,7 @@ class AdminController < ApplicationController
 		
 			unless params[:r_id]
 				format.html { redirect_to admin_index_url }
-				flash[:warn] = "E necessario que voce escolha alguma receita para clicar aqui!"			
+				flash[:warn] = "É necessário que você escolha alguma receita para clicar aqui!"			
 			else
 				@recipe = Recipe.find(params[:r_id])
 				@recipe.each do |d|

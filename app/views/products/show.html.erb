@@ -1,5 +1,30 @@
 <%- title(@category.title) %>
 <%- selected(:produtos) %> 
 
+<% unless @category.blank?%>
+	<h3 class="titulos">	» Você está na categoria: <%= @category.title %></h3>
+<% end -%>
+<br />
 
-<%= render :partial => "products"%>
+<% unless @products.blank? %>
+
+	<%= render :partial => "products"%>
+
+<% else %>
+
+<div align="center">
+	<%= image_tag("atention.png") %>
+	<br />
+	<h3>Ainda não temos produtos cadastrados nessa categoria.</h3>
+	<br />
+	<br />
+	<br />
+	<p>Enquanto isso confira as demais categorias clicando <%= link_to "aqui", products_path %></p>
+</div>
+<% end %>
+
+
+
+<div id="links">
+	<%= voltar %>
+</div>

@@ -1,14 +1,10 @@
-<%- javascripts_normal "jquery.lightbox-0.5"%>
-<%- stylesheets("index", "all", "lightbox") %>
-
-
 <%- title(@event.title) %>
 <%- selected(:eventos) %>
 
 <div id="textevent">
 	<% @textevent.each do |t| %>
 	
-	<h3 class="titles_index"><%= t.title %><small> - <%= t.location %>, <%= t.city %></small></h3><small>(<%= t.created_at.strftime("%d/%m/%Y") %>)</small>
+	<h3><%= t.title %><small> - <%= t.location %>, <%= t.city %></small></h3><small>(<%= t.created_at.strftime("%d/%m/%Y") %>)</small>
 		
 		<%= t.description %>
 	<% end %>
@@ -27,7 +23,11 @@
 		</div>
 	<% end %>
 </div>
+<div class="clear">
+	
+</div>
 
-<br />
-<%= image_tag("arrow.png", :class=> "align-arrow") %>
-<%= link_to 'Voltar', pictures_path, :class => "style-link-recipe" %>
+<div id="links">
+	<%= voltar %>
+</div>
+

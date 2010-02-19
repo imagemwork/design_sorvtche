@@ -5,18 +5,11 @@
 		
 		<%= stylesheet_link_tag "index", "slider" %>
 
-
 		<%= javascript_include_tag "jquery", "s3Slider.js" %>
-		
-		<%= yield(:stylesheets) %>
 		
 		<!--[if IE]>
 			<%= stylesheet_link_tag "ie" %>
 		<![endif]-->
-		<!--[if IE 6]>
-			<%= stylesheet_link_tag "ie6" %>
-		<![endif]-->
-
 
 		<script type="text/javascript">
 		    $(document).ready(function() {
@@ -41,9 +34,9 @@
 				<div id="menu">
 					<ul id="menu-links">
 						<li class='<%= yield(:home) %>'><%= link_to "Home", home_index_path %></li>
-						<li class='<%= yield(:empresa) %>'><%= link_to "Empresa", :controller => "home", :action => "empresa" %></li>
 						<li class='<%= yield(:recipes) %>'><%= link_to "receitas", recipes_path %></li>
 						<li class='<%= yield(:produtos) %>'><%= link_to "produtos", products_path %></li>
+						<li class='<%= yield(:eventos) %>'><%= link_to "eventos", pictures_path %></li>
 						<li class='<%= yield(:franquias) %>'><%= link_to "Franquias", :controller => "home", :action => "empresa" %></li>
 						<li class='<%= yield(:contato) %>'><%= link_to "Contato", new_contact_path %></li>
 
@@ -52,7 +45,7 @@
 						<div id="busca">
 							<% form_tag busca_products_path do %>
 								<p>
-									<%= text_field_tag :search, params[:search] %>
+									<%= text_field_tag :search, params[:search], :class => "input-busca" %>
 									<%= image_submit_tag ("search.jpg"), :name => nil %>
 								</p>
 							<% end %>

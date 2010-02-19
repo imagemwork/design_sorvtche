@@ -9,6 +9,10 @@ body {
 	height: 100%;
 }
 
+#contato-left, .align-arrow { behavior: url(/fixie6/iepngfix.htc) }
+
+.ie { behavior: url(/fixie6/iepngfix.htc) }
+
 html {
 	height: 100%;
 }
@@ -19,8 +23,8 @@ html {
 #all {
 	position: relative;
 	min-height: 100%;
-	height: 100$s;
-	background: red;
+
+	background: #d7e500;
 }
 
 #allSite {
@@ -41,7 +45,23 @@ html {
 	width: 980px;
 	min-height: 400px;
 	padding: 10px;
+	position: relative;
 	background: #fff;
+}
+
+#links {
+	position: absolute;
+	top: 0px;
+	right: 0px;
+	padding: 10px;
+}
+
+#links a {
+	font-size: 12px;
+	font-weight: bold;
+	color: #CC0000;
+	text-decoration: none;
+	text-transform: uppercase;
 }
 
 #header {
@@ -58,12 +78,11 @@ html {
 }
 
 #busca {
-	width: 330px;
+	width: 265px;
 	padding: 5px;
 	position: absolute;
 	right: 0px;
 	top:5px;
-
 	float: right;
 }
 
@@ -81,6 +100,16 @@ html {
 	font-size: 12px;
 	color: #666;
 	margin: 10px;
+}
+
+.button-login, .button-login-c {
+	margin-left: 10em;
+	width: 95px;
+	height: 24px;
+	border: 0px;
+	color: #fff;
+	font-weight: bold;
+	background: url('/images/submit.jpg') no-repeat center center;
 }
 
 #form-receitas label {
@@ -171,7 +200,7 @@ html {
 #menu-links {
 	width: 650px;
 	padding: 19px;
-	font-size: 12px;
+	font-size: 10px;
 	float: left;
 
 }
@@ -265,7 +294,14 @@ html {
 	padding: 10px;
 }
 
-
+#result-busca {
+	margin: 5px;
+	background: #FAFFAF;
+	padding: 10px;
+	font-size: 13px;
+	font-weight: bold;
+	border: 1px solid #FFB832;
+}
 
 .align-arrow {
 	position: relative;
@@ -275,6 +311,7 @@ html {
 
 h3.titulos {
 	color: #CC0000;
+	font-size: 17px;
 	width: 400px;
 	margin-bottom: 10px;
 	border-bottom: 2px solid #EEEEEE;
@@ -508,7 +545,7 @@ ul.categorias-ul li a:hover {
 }
 table.nutricional {
 	font-size:11px;
-	width: 210px;
+	width: 220px;
 }
 table.nutricional th {
 	padding: 5px;
@@ -528,6 +565,9 @@ tr.even {
 table.nutricional span {
 	float: right;
 }
+table.nutricional p {
+	float: left	;
+}
 #busca-error {
 	padding: 10px;
 	font-size: 18px;
@@ -538,4 +578,63 @@ table.nutricional span {
 	color: red;
 	font-weight: bold;
 	text-decoration: none;
+}
+
+.links-result-busca {
+	float: right;
+}
+.links-result-busca a {
+	color: black``;
+}
+
+
+/* EVENTOS */
+#pnlEvents {
+	height: auto;
+	margin: 0 auto;
+}
+
+#show-event a {
+	position: relative;
+	top: 9px;
+	color: #666;
+	font-weight: bold;
+	text-decoration: none;
+	font-size: 13px;
+}
+
+#show-event {
+	width: 195px;
+	height: 180px;
+	float: left;
+	margin: 5px;
+	padding: 20px 0px 0px 0px;
+	text-align: center;
+	background: url("/images/show-event.jpg") no-repeat center top;
+}
+
+#textevent { 
+	padding: 20px 5px 10px 10px;
+	font-weight: bold;
+	font-size: 12px;
+	color: #666;
+	text-align: justify;
+	background: url("/images/aspas.jpg") no-repeat left top;
+	position: relative;
+}
+
+#fuck {
+	width: 860px;
+	margin: 0 auto;
+}
+
+#show-event-in {
+	width: 195px;
+	height: 180px;
+	float: left;
+	margin: 5px;
+	padding: 20px 0px 0px 0px;
+	text-align: center;
+	font-size: 12px;
+	background: url("/images/show-event-in.jpg") no-repeat center top;
 }

@@ -14,8 +14,6 @@
 		
 	</p> <br /> 
 
-
-
 </div>
 
 	<% @recipes.each do |r| %>
@@ -26,8 +24,10 @@
 		<small>criado em: <b><%= r.created_at.strftime("%d/%m/%y") %></b>, por: <b><%= r.person_name %></b></small>
 		<br />
 		
-		
-		
 	</div>
 	
 	<% end %>
+	
+	<div id="links">
+		<%= voltar %>
+	</div>

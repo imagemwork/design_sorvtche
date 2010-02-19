@@ -1,18 +1,12 @@
 --- 
 javascripts: 
 - base: 
-  - menu
-  - slider
-  - jquery.jcarousel.pack
-  - ifsafari
+  - s3Slider
 stylesheets:
-- all:
-  - all
 - lightbox:
   - lightbox
-- index:
-  - index
 - base:
-  - menu
-  - jquery.jcarousel
-  - skin   
+  - ie
+  - index
+  - admin
+  - slider

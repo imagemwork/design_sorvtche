@@ -1,7 +1,3 @@
-<% unless @category.blank?%>
-	<h3 class="titulos">	» Você está na categoria: <%= @category.title %></h3>
-<% end -%>
-<br />
 
 <div id="todos-produtos">
 	<% @products.each  do |p| %>
@@ -13,35 +9,35 @@
 						<th>Informação Nutricional<br><small>Porção de 100g(10 colheres de sopa)</small></th>
 						<th>%VD</th>
 					<tr class="odd">
-						<td>Valor Calórico <span><%= p.v_calorico %></span></td>
-						<td align="center"></td>
+						<td><p>Valor Calórico</p> <span><%= p.v_calorico %></span></td>
+						<td align="center"><%= p.vd_product.v_calorico %></td>
 					</tr>
 					<tr class="even">
-						<td>Carboidratos <span><%= p.carb %></span></td>
+						<td><p>Carboidratos </p><span><%= p.carb %></span></td>
 						<td align="center"><%= p.vd_product.carb %></td>
 					</tr>
 					<tr class="odd">
-						<td>Proteínas <span><%= p.proteinas %></span></td>
+						<td><p>Proteínas </p><span><%= p.proteinas %></span></td>
 						<td align="center"><%= p.vd_product.proteinas %> %</td>
 					</tr>
 					<tr class="even">
-						<td>Gorduras Totais <span><%= p.gorduras_t %></span></td>
+						<td><p>Gorduras Totais</p> <span><%= p.gorduras_t %></span></td>
 						<td align="center"><%= p.vd_product.gorduras_t %>%</td>
 					</tr>
 					<tr class="odd">
-						<td>Gord. Saturadas <span><%= p.gorduras_s %></span></td>
+						<td><p>Gord. Saturadas</p> <span><%= p.gorduras_s %></span></td>
 						<td align="center"><%= p.vd_product.gorduras_s %> %</td>
 					</tr>
 					<tr class="even">
-						<td>Gord. Trans <span><%= p.gordruras_tra %></span></td>
+						<td><p>Gord. Trans</p> <span><%= p.gordruras_tra %></span></td>
 						<td align="center">**</td>
 					</tr>
 					<tr class="odd">
-						<td>Fibra Alimentar <span><%= p.fibra %></span></td>
+						<td><p>Fibra Alimentar</p> <span><%= p.fibra %></span></td>
 						<td align="center"><%= p.vd_product.fibra %> %</td>
 					</tr>
 					<tr class="even">
-						<td>Sódio <span><%= p.sodio %></span></td>
+						<td><p>Sódio </p><span><%= p.sodio %></span></td>
 						<td align="center"><%= p.vd_product.sodio %>  %</td>
 					</tr>
 				</table>
@@ -54,7 +50,7 @@
 			</div>
 			
 			<div class="ingredientes"><b>Ingredientes:</b><%= p.ingredients %></div><br />
-			<div class="peso"><b>Peso:</b><br /><%=h p.weight %>Kg</div>
+			<div class="peso"><b>Peso:</b> <%=h p.weight %>Kg</div>
 		</div>
 	<% end %>
 </div>
