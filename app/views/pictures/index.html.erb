@@ -5,15 +5,30 @@
 <br />
 
 
-<div id="pnlEvents">
-	<% @events.each do |e| %>
-		<div id="show-event">
-			<%= link_to image_tag(e.event.url(:thumb), :border => 0), :controller => "pictures", :action => "show", :id => e.id  %><br />
-			<%= link_to e.title, :controller => "pictures", :action => "show", :id => e.id %>
-		</div>
-	<% end %>
+<% unless @events.blank? %>
+
+	<div id="pnlEvents">
+		<% @events.each do |e| %>
+			<div id="show-event">
+				<%= link_to image_tag(e.event.url(:thumb), :border => 0), :controller => "pictures", :action => "show", :id => e.id  %><br />
+				<%= link_to e.title, :controller => "pictures", :action => "show", :id => e.id %>
+			</div>
+		<% end %>
+	</div>
+	<div class="clear"></div>
+
+<% else %>
+
+<div align="center">
+	<%= image_tag("atention.png", :class => "ie") %><br /><br />
+	<h3>Ainda não possuímos eventos cadastrados, pedimos a compreenção. </h3>	
 </div>
-<div class="clear"></div>
+
+	
+
+<% end %>
+
+
 
 <div id="links">
 	<%= voltar %>

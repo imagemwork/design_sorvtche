@@ -2,12 +2,19 @@
 	
 	<%- title("Sua busca retornou #{pluralize(@products.size, 'produto')}") %>
 
-	<div id="result-busca">Sua busca retornou <%= pluralize(@products.size, "produto") %></div>
+	<div id="result-busca">
+		Sua busca retornou <%= pluralize(@products.size, "produto") %>
+		
+		<span class="links-result-busca"><%= link_to "Listar todos produtos", products_path %> / <%= voltar %></span>
+	</div>
 	<%= render :partial => "products" %>
+	
 <% else %>
+
 	<div id="busca-error">
-		<p><%= image_tag("atention.png") %><br/>Sua busca não retornou nenhum resultado para o termo <b><i><%= params[:search] %></i></b></p><br />
+		<p><%= image_tag("atention.png", :class=>"ie") %><br/>Sua busca não retornou nenhum resultado para o termo <b><i><%= params[:search] %></i></b></p><br />
 		<p>para ir à pagina de produtos, <%= link_to "clique aqui", products_path %></p>
 	</div>
 	<%- title("Sua busca não retornou nenhum resultado") %>
+	
 <% end -%>
