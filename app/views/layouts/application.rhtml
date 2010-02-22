@@ -3,19 +3,19 @@
 		<meta http-equiv="Content-type" content="text/html; charset=utf-8" />
 		<title> Sorvtche - <%= yield(:title) %> </title>
 		
-		<%= stylesheet_link_tag "index", "slider" %>
-
-		<%= javascript_include_tag "jquery", "s3Slider.js" %>
+		<%= stylesheet_link_tag "index", "slider", "lightbox" %>
+		<%= javascript_include_tag "jquery", "s3Slider" %>
 		
 		<!--[if IE]>
 			<%= stylesheet_link_tag "ie" %>
 		<![endif]-->
 
 		<script type="text/javascript">
-		    $(document).ready(function() {
+		    $(document).ready(function(){
 		        $('#slider1').s3Slider({
 		            timeOut: 4000 
 		        });
+		 				$('#fuck a').lightBox();
 		    });
 		</script>
 
@@ -63,15 +63,8 @@
 			
 
 		</div><!-- end allsite -->
-		
-		<%= yield(:javascripts) %>
-		<%= yield(:javascripts_normal) %>
 
-		<script type="text/javascript">
-	    $(function() {
-	        $('#fuck a').lightBox();
-	    });
-	    </script>
+		<%= yield(:javascripts_normal) %>
 
 			<div id="rodape">
 				<div id="top"></div>

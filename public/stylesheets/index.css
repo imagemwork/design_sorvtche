@@ -9,6 +9,11 @@ body {
 	height: 100%;
 }
 
+.saiba_mais a {
+	font-size: 12px;
+	color: #666;
+}
+
 #contato-left, .align-arrow { behavior: url(/fixie6/iepngfix.htc) }
 
 .ie { behavior: url(/fixie6/iepngfix.htc) }
