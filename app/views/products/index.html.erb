@@ -21,7 +21,7 @@
 	
 	<% @categories.each do |c| %>
 		<div id="categorias">
-			<%= link_to image_tag(c.photo.url(:thumb), :border=>0), :controller => "products", :action => "show", :id => c.id %><br />
+			<%= link_to image_tag(c.photo.url(:thumb), :border=>0, :class => "chupar"), :controller => "products", :action => "show", :id => c.id %><br />
 			<div id="nomes-categorias">
 				<%= link_to c.title, :controller => "products", :action => "show", :id => c.id %>
 			</div>

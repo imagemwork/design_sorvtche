@@ -1,6 +1,12 @@
 <%- title(@event.title) %>
 <%- selected(:eventos) %>
 <%- javascripts_normal("jquery.lightbox-0.5")%>
+<script type="text/javascript" charset="utf-8">
+	$(document).ready(function(){
+		$('#fuck a').lightBox();
+	})
+</script>
+
 
 <div id="textevent">
 	<% @textevent.each do |t| %>
@@ -20,7 +26,7 @@
 			<%= link_to image_tag(p.picture.url(:thumb), :border => 0), p.picture.url(:large), :title => p.name %>
            
 			<br />
-			<%= p.name %>
+			<p class="name-foto"><%= p.name %></p>
 		</div>
 	<% end %>
 </div>

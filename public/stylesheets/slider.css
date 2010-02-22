@@ -1,25 +1,8 @@
-	#slider1 {
-	    width: 980px; /* important to be same as image width */
-	    height: 220px; /* important to be same as image height */
-	    position: relative; /* important */
-		overflow: hidden; /* important */
-		background: url('/images/back-products.jpg') repeat-x right center;
-		margin: 0 auto;
-	
-	}
-	
+
 	img {
 		border: none;
 	}
 
-	#slider1Content {
-	    width: 700px; /* important to be same as image width or wider */
-	    position: absolute;
-		top: 0;
-		margin: 0 auto;
-		left: 135px;
-		padding: 10px;
-}
 	.slider1Image {
 	    float: left;
 	    position: relative;

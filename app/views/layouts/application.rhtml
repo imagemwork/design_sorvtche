@@ -3,20 +3,26 @@
 		<meta http-equiv="Content-type" content="text/html; charset=utf-8" />
 		<title> Sorvtche - <%= yield(:title) %> </title>
 		
-		<%= stylesheet_link_tag "index", "slider", "lightbox" %>
+		
 		<%= javascript_include_tag "jquery", "s3Slider" %>
 		
 		<!--[if IE]>
 			<%= stylesheet_link_tag "ie" %>
 		<![endif]-->
+		
 
-		<script type="text/javascript">
-		    $(document).ready(function(){
-		        $('#slider1').s3Slider({
-		            timeOut: 4000 
-		        });
-		 				$('#fuck a').lightBox();
-		    });
+
+		<script type="text/javascript" language="javascript">
+			if (screen.width == "1024") {
+				document.write('<%= stylesheet_link_tag "1024" %>');
+				document.write('<%= stylesheet_link_tag "slider" %>');
+				document.write('<%= stylesheet_link_tag "lightbox" %>');
+			}
+			else {
+				document.write('<%= stylesheet_link_tag "index" %>');
+				document.write('<%= stylesheet_link_tag "slider" %>');
+				document.write('<%= stylesheet_link_tag "lightbox" %>');
+			}
 		</script>
 
 
