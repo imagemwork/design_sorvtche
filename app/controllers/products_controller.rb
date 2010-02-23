@@ -25,6 +25,7 @@ class ProductsController < ApplicationController
 		@category = Category.find(params[:id])
     respond_to do |format|
       format.html { render :layout => "application" }
+
     end
   end
 

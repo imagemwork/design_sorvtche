@@ -12,7 +12,7 @@
 <div id="categorias-left">
 	<ul class="categorias-ul">
 		<% @categories.each do |c| %>
-			<li><%= link_to c.title, :controller => "products", :action => "show", :id => c.id %></li>
+			<li><%= link_to c.title, c %></li>
 		<% end %>
 	</ul>
 </div>

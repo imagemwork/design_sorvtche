@@ -16,7 +16,7 @@ body {
 
 #contato-left, .align-arrow { behavior: url(/fixie6/iepngfix.htc) }
 
-.ie { behavior: url(/fixie6/iepngfix.htc) }
+.ie, #nomes-categorias { behavior: url(/fixie6/iepngfix.htc) }
 
 html {
 	height: 100%;

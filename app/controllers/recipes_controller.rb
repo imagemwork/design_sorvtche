@@ -11,10 +11,11 @@ class RecipesController < ApplicationController
   end
 
   def show
+        
   	recipe = Recipe.find(params[:id])
   
   	unless recipe.passed == false
-			 @recipe = Recipe.find(params[:id])
+			 @recipe = recipe
 		else
 			 logger.warn("AVISO: Alguem tentou acessar receitas nao permitidas.")
 			 render :controller => "recipes", :action => "warn"

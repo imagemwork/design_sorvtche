@@ -5,4 +5,9 @@ class Recipe < ActiveRecord::Base
                       :with =>  /^([^@\s]+)@((?:[-a-z0-9]+\.)+[a-z]{2,})$/i,
                       :message => "parece não ser válido"
 
+
+  def to_param
+    "#{id}-#{name.parameterize}"
+  end
+
 end

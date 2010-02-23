@@ -355,7 +355,7 @@ h3.pagina-empresa {
 /* RECEITAS */
 #descricao-receitas {
 	float: right;
-	width: 430px;
+	width: 400px;
 	font-size: 13px;
 }
 
@@ -366,7 +366,7 @@ h3.pagina-empresa {
 	width: 120px;
 }
 #receita {
-	width: 300px;
+	width: 340px;
 	padding:10px;
 	background:#F7F7F7;
 	border-bottom: 1px solid #ccc;
