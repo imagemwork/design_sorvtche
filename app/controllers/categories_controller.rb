@@ -2,13 +2,11 @@ class CategoriesController < ApplicationController
 
   before_filter :authenticate, :only => [:new, :edit, :destroy]
 	layout "admin", :only => ["new", "edit"]
-
+  
   def index
     @categories = Category.all
-
     respond_to do |format|
-      format.html # index.html.erb
-      format.xml  { render :xml => @categories }
+        format.html { render :layout => "application" }
     end
   end
 
@@ -63,6 +61,14 @@ class CategoriesController < ApplicationController
         format.html { render :action => "edit" }
         format.xml  { render :xml => @category.errors, :status => :unprocessable_entity }
       end
+    end
+  end
+  
+  def show
+    @products = Product.all(:conditions => "category_id = '2'")
+		#@category = Category.find(params[:c])
+    respond_to do |format|
+      format.html { render :layout => "application" }
     end
   end
 
