@@ -64,8 +64,8 @@ class CategoriesController < ApplicationController
     end
   end
   
-  def show
-    @products = Product.all(:conditions => "category_id = '2'")
+  def show    
+    @products = Product.all(:conditions => "category_id = '#{}'")
 		#@category = Category.find(params[:c])
     respond_to do |format|
       format.html { render :layout => "application" }
