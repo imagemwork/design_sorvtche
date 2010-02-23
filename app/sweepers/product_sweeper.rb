@@ -22,7 +22,7 @@ class ProductSweeper < ActionController::Caching::Sweeper
     expire_page(:controller => 'products', :action => 'index')
 
     # Isso removera /products/2.html
-    expire_page(:controller => 'products', :action => 'show', :id => record.id)
+    expire_page(:controller => 'products', :action => 'show', :id => 1)
     
     # Isso removera /products/page/2.html e outras na mesma pasta
     cache_dir = ActionController::Base.page_cache_directory
